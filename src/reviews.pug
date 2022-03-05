@@ -1,0 +1,113 @@
+---
+title: Отзывы - Психотерапевтический центр
+page_reviews: true
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Отзывы', 'Отзывы')
+
+    section.reviews-section
+
+        .container
+
+            .reviews__tab
+
+                ul.reviews__tab-list
+                    li
+                        a.reviews__tab-link.active Все отзывы
+                    li
+                        a.reviews__tab-link Лечении алкоголизма
+                    li
+                        a.reviews__tab-link Лечении игромании
+                    li
+                        a.reviews__tab-link Снижение и коррекция веса
+                    li
+                        a.reviews__tab-link Врачи
+                    li
+                        a.reviews__tab-link Лечение табакокурения
+
+            .reviews__wrapper
+
+                .reviews__block
+                    .reviews__block-left
+                        p.reviews__head Екатерина
+
+                        .reviews__info
+                            p.reviews__text Москва
+                            p.reviews__text 55 лет
+                            p.reviews__text Запойный алкоголизм
+
+                    .reviews__block-right
+                        p.reviews__head Текст отзыва:
+                        p.reviews__text Выражаю огромную благодарность Специалистам Центра за помощь в лечении тяги к алгоголю моего отца. 6 лет он живет полноценной жизнью, со здравым умом. Изменились у него многие приоритеты, на жизнь смотрит другими глазами и порой даже говорит, что потерял много лет своей жизни, находясь в таком сотоянии. Мы всей нашей семьей надеемся, что так будет и дальше и наш папуля навсегда забыл об этом "зелёном змее".
+
+                .reviews__block
+                    .reviews__block-left
+                        p.reviews__head Екатерина
+
+                        .reviews__info
+                            p.reviews__text Москва
+                            p.reviews__text 55 лет
+                            p.reviews__text Запойный алкоголизм
+
+                    .reviews__block-right
+                        p.reviews__head Текст отзыва:
+                        p.reviews__text Выражаю огромную благодарность Специалистам Центра за помощь в лечении тяги к алгоголю моего отца. 6 лет он живет полноценной жизнью, со здравым умом. Изменились у него многие приоритеты, на жизнь смотрит другими глазами и порой даже говорит, что потерял много лет своей жизни, находясь в таком сотоянии. Мы всей нашей семьей надеемся, что так будет и дальше и наш папуля навсегда забыл об этом "зелёном змее".
+
+                .reviews__block
+                    .reviews__block-left
+                        p.reviews__text Екатерина
+
+                        .reviews__info
+                            p.reviews__text Москва
+                            p.reviews__text 55 лет
+                            p.reviews__text Запойный алкоголизм
+
+                    .reviews__block-right
+                        p.reviews__head Текст отзыва:
+                        p.reviews__text Выражаю огромную благодарность Специалистам Центра за помощь в лечении тяги к алгоголю моего отца. 6 лет он живет полноценной жизнью, со здравым умом. Изменились у него многие приоритеты, на жизнь смотрит другими глазами и порой даже говорит, что потерял много лет своей жизни, находясь в таком сотоянии. Мы всей нашей семьей надеемся, что так будет и дальше и наш папуля навсегда забыл об этом "зелёном змее".
+
+                .reviews__block
+                    .reviews__block-left
+                        p.reviews__head Екатерина
+
+                        .reviews__info
+                            p.reviews__text Москва
+                            p.reviews__text 55 лет
+                            p.reviews__text Запойный алкоголизм
+
+                    .reviews__block-right
+                        p.reviews__head Текст отзыва:
+                        p.reviews__text Выражаю огромную благодарность Специалистам Центра за помощь в лечении тяги к алгоголю моего отца. 6 лет он живет полноценной жизнью, со здравым умом. Изменились у него многие приоритеты, на жизнь смотрит другими глазами и порой даже говорит, что потерял много лет своей жизни, находясь в таком сотоянии. Мы всей нашей семьей надеемся, что так будет и дальше и наш папуля навсегда забыл об этом "зелёном змее".
+
+                .reviews__block
+                    .reviews__block-left
+                        p.reviews__head Екатерина
+
+                        .reviews__info
+                            p.reviews__text Москва
+                            p.reviews__text 55 лет
+                            p.reviews__text Запойный алкоголизм
+
+                    .reviews__block-right
+                        p.reviews__head Текст отзыва:
+                        p.reviews__text Выражаю огромную благодарность Специалистам Центра за помощь в лечении тяги к алгоголю моего отца. 6 лет он живет полноценной жизнью, со здравым умом. Изменились у него многие приоритеты, на жизнь смотрит другими глазами и порой даже говорит, что потерял много лет своей жизни, находясь в таком сотоянии. Мы всей нашей семьей надеемся, что так будет и дальше и наш папуля навсегда забыл об этом "зелёном змее".
+
+            .reviews__pagination
+                a.reviews__pagination-link.active(href="#") 1
+                a.reviews__pagination-link(href="#") 2
+                a.reviews__pagination-link(href="#") 3
+                a.reviews__pagination-link(href="#") 4
+                a.reviews__pagination-link(href="#") 5
+
+    // CONSULTATION
+    section.consultation-section.cons-review-section
+        include components/_consultation
+
+    // CONSULTATION
+    section.consultation-section.invert-section
+        include components/_consultation-blue

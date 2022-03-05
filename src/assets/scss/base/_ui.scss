@@ -66,17 +66,18 @@ select {
     position: relative;
     width: 100%;
     max-width: 1186px;
+    box-sizing: border-box;
 }
 
 .button-style {
     padding: 11px 32px;
     width: 100%;
     height: 40px;
-    max-width: 198px;
     font-size: 12px;
     line-height: 15px;
     border-radius: 44px;
     transition: all 0.5s ease;
+    box-sizing: border-box;
 }
 
 .button-style:hover {
@@ -93,6 +94,17 @@ select {
     color: #fff;
 }
 
+.input-style {
+    width: 100%;
+    border: 1px solid #D8D8D8;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.input-style:focus {
+    border: 1px solid #D8D8D8;
+}
+
 h1 {
     font-weight: 500;
     font-size: 36px;
@@ -102,6 +114,55 @@ h1 {
 
 h2 {
     font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000;
+}
+
+.section-title {
+    font-weight: 500;
     font-size: 30px;
     line-height: 37px;
+    color: #000;
+}
+
+/////////////
+/// SWIPER
+/////////////
+
+.swiper-pagination.swiper-dots {
+    bottom: 0;
+}
+
+.swiper-pagination.swiper-dots .swiper-pagination-bullet {
+    margin: 0 8px!important;
+    opacity: 1;
+}
+
+.swiper-pagination.swiper-dots .swiper-pagination-bullet-active {
+    position: relative;
+}
+
+.swiper-pagination.swiper-dots .swiper-pagination-bullet-active::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.swiper-arrows {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.swiper-button {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    color: #05256F;
 }

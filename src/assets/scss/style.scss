@@ -14,6 +14,12 @@ $lightOrange: #F5D37E;
 
 @import 'includes/header';
 @import 'includes/footer';
-@import 'includes/breadcrumbs';
+
+@import 'components/breadcrumbs';
+@import 'components/consultation';
 
 @import 'pages/homepage';
+@import 'pages/doctors';
+@import 'pages/doctors-inner';
+@import 'pages/reviews';
+@import 'pages/about';

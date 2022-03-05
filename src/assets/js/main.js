@@ -7,8 +7,14 @@ $(document).ready(function() {
         });
 
         $('.down-arrow').on('click', function() {
-            $(this).parent().parent().find('.menu-subcat').slideToggle();
+            $(this).parent().parent().find('.menu-subcat, .footer__menu-subcat').slideToggle();
         });
     }
+
+    $(function () {
+        $(document).on("click", ".doc-inner-license_img", function () {
+          $(this).cpLightimg();
+        });
+      });
 
 });

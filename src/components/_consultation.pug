@@ -1,0 +1,26 @@
+.container
+
+    .consultation-wrapper
+
+        h2.consultation-title Запишитесь на бесплатную консультацию по телефону
+        p.consultation-subtitle Ваш близкий зависим, но отказывается от лечения? Мы знаем, что делать! Опытный специалист найдет правильный подход, и убедит пациента принять помощь и начать лечение! Просто введите имя и телефон
+
+        form.consultation-form
+
+            .cons-form-row
+
+                .cons-input-wrapper
+                    label Ваше имя
+                    .cons-input.cons-input-name
+                        input.input-style(type="text" name="name" placeholder="Представьтесь, как вас зовут?")
+
+                .cons-input-wrapper
+                    label Ваш телефон
+                    .cons-input.cons-input-phone
+                        input.input-style(type="text" name="phone" placeholder="Введите телефон в любом формате")
+
+            .cons-form-row
+
+                p.cons-agreement Отправляя заявку, вы соглашаетесь на обработку <a href="#">персональных данных</a> и с условиями <a href="#">политики конфиденциальности</a>
+
+                button.cons-button.button-style.button-style--orange(type="submit") Отправить данные

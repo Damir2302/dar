@@ -192,6 +192,7 @@ button.button-style.button-style--blue {
 .navbar__submenu {
     padding-left: 15px;
     display: none;
+    z-index: 1;
 
     @include breakpoint(lg) {
         padding: 50px 55px 20px;
@@ -224,14 +225,18 @@ button.button-style.button-style--blue {
     }
 }
 
+.menu-item_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .menu-item_link {
     position: relative;
     line-height: 28px;
 }
 
 .down-arrow {
-    position: absolute;
-    right: 0;
 
     @include breakpoint(lg) {
         display: none;
@@ -286,6 +291,10 @@ button.button-style.button-style--blue {
         padding: 15px 50px;
         font-size: 16px;
     }
+}
+
+.navbar__item.active {
+    border-top: 3px solid $blue;
 }
 
 .navbar__item-submenu {
@@ -365,7 +374,7 @@ button.button-style.button-style--blue {
 }
 
 .header__top-mobile .header__buttons {
-    margin: 20px 00 ;
+    margin: 20px 0;
     display: flex;
     align-items: center;
     flex-direction: column;

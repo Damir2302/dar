@@ -1,0 +1,131 @@
+//////////////////
+/// ABOUT
+//////////////////
+
+.about-section {
+    padding: 55px 0 100px;
+}
+
+.about__wrapper {
+    display: flex;
+    column-gap: 30px;
+}
+
+.about__cat-item {
+    width: 362px;
+}
+
+.about__cat-item {
+    position: relative;
+    line-height: 46px;
+    border: 1px solid #D8D8D8;
+    border-bottom: none;
+}
+
+.about__cat-item:last-child {
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.about__cat-item::before {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    font-family: $icon;
+    font-size: 18px;
+    line-height: 18px;
+    color: #F5D37E;
+}
+
+.about__cat-item:nth-child(1)::before {
+    content: '\f808';
+}
+
+.about__cat-item:nth-child(2)::before {
+    content: '\f133';
+}
+
+.about__cat-item:nth-child(3)::before {
+    content: '\f03e';
+}
+
+.about__cat-item:nth-child(4)::before {
+    content: '\f5f3';
+}
+
+.about__cat-item:nth-child(5)::before {
+    content: '\f1ea';
+}
+
+.about__cat-item:nth-child(6)::before {
+    content: '\f037';
+}
+
+.about__cat-item:nth-child(7)::before {
+    content: '\f870';
+}
+
+.about__cat-item:nth-child(8)::before {
+    content: '\f075';
+}
+
+.about__cat-item:nth-child(9)::before {
+    content: '\f0b1';
+}
+
+.about__cat-item.active {
+    border: 1px solid #04246E;
+}
+
+.about__cat-link {
+    padding: 16px 55px;
+    font-weight: 500;
+}
+
+.about__title {
+    margin: 0 0 30px;
+}
+
+.about__list-title {
+    margin: 46px 0 26px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.about__list {
+    margin: 0 0 50px;
+}
+
+.about__list-item  {
+    margin-left: 32px;
+    position: relative;
+    font-size: 16px;
+    line-height: 32px;
+    color: $blue;
+}
+
+.about__list-item::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -32px;
+    width: 11px;
+    height: 11px;
+    border: 3px solid #04246E;
+    border-radius: 50%;
+}
+
+//////////////////
+/// ABOUT HISTORY
+//////////////////
+
+.about-h-row {
+    margin: 0 0 40px;
+}
+
+.about-h-year {
+    margin: 0 0 13px;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 59px;
+    color: #000;
+}

@@ -1,0 +1,26 @@
+.container
+
+    .consultation-wrapper.invert-block
+
+        h2.consultation-title.invert-block Остались вопросы?
+        p.consultation-subtitle.invert-block Напишите свое имя и телефон и дежурный врач свяжется с Вами в течении 1 минуты. Анонимная бесплатная консультация. Мы поможем Вам или вашему близкому справиться с состоянием
+
+        form.consultation-form
+
+            .cons-form-row
+
+                .cons-input-wrapper
+                    label.invert-block Ваше имя
+                    .cons-input.cons-input-name.invert-block
+                        input.invert-block.input-style(type="text" name="name" placeholder="Представьтесь, как вас зовут?")
+
+                .cons-input-wrapper
+                    label.invert-block Ваш телефон
+                    .cons-input.cons-input-phone.invert-block
+                        input.invert-block.input-style(type="text" name="phone" placeholder="Введите телефон в любом формате")
+
+            .cons-form-row
+
+                p.cons-agreement.invert-block Отправляя заявку, вы соглашаетесь на обработку <a href="#">персональных данных</a> и с условиями <a href="#">политики конфиденциальности</a>
+
+                button.cons-button.button-style.button-style--orange(type="submit") Отправить данные

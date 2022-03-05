@@ -1,0 +1,66 @@
+---
+title: Гонтовой Александр Александрович - Психотерапевтический центр
+page_doctors: true
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Гонтовой Александр Александрович', 'Врачи', 'Гонтовой Александр Александрович')
+
+    section.doc-inner-section
+
+        .container
+
+            .doc-inner__wrapper
+
+                .doc-left-col
+
+                    .doc-inner-img
+                        img(src="assets/images/doc-inner.jpg", alt="img")
+
+                    a.doc-inner-link(href="https://facebook.com" target="_blank") Страница врача в facebook.com
+
+                    button.doc-inner-btn.button-style.button-style--orange Записаться на приём
+
+                .doc-right-col
+
+                    h2.doc-inner-title Гонтовой Александр Александрович
+                    p.doc-inner-info Психиатр-нарколог, психотерапевт. Ученик А. Р. Довженко. Награжден медалью Международной Лиги трезвости и здоровья. Ведущий специалист в области лечения табачной и алкогольной зависимостей.
+                      br
+                      br
+                      | В 1981 году окончил Запорожский Медицинский институт. В 1982 году – интернатура по психиатрии при Киевском Медицинском институте. 1986-1989 – заместитель А.Р.Довженко по лечебной части, г. Феодосия. 1990 г. – главный врач психиатрического центра при МИДе СССР, г. Москва. Имеет лицензию на право осуществления медицинской деятельности Департаментом здравоохранения при правительстве города Москвы. В «Психотерапевтическом центре «ДАР» работает с 1997 года ведущим специалистом психиатром-наркологом, психотерапевтом.
+
+                    h2.doc-inner-title_list Специализируется на лечении:
+                    ul.doc-inner-list
+                        li алкоголизма методом кодирования
+                        li табакокурения
+                        li неврозов
+                        li депрессий
+                        li фобий и страхов
+                        li индивидуальных психологических консультациях
+
+                    h2.doc-inner-title_list Свидетельства
+                    ul.doc-inner-list
+                        li Лицензия Департамента здравоохранения города Москва ЛО-7701004883 от 28 февраля 2012
+                        li Приложение к лицензии Департамента здравоохранения города Москва ЛО-7701004883 от 28 февраля 2012
+                        li Удостоверение №30
+                        li Удостоверение В память о народном враче СССР А.Р. Довденко
+                        li Сертификат специалиста
+                        li Сертификат специалиста
+                        li Документ о квалификации
+
+                    .doc-inner-license
+                        img.doc-inner-license_img(src="assets/images/license-1.jpg", alt="license")
+                        img.doc-inner-license_img(src="assets/images/license-1.jpg", alt="license")
+                        img.doc-inner-license_img(src="assets/images/license-1.jpg", alt="license")
+                        img.doc-inner-license_img(src="assets/images/license-1.jpg", alt="license")
+                        img.doc-inner-license_img(src="assets/images/license-1.jpg", alt="license")
+                        img.doc-inner-license_img(src="assets/images/license-1.jpg", alt="license")
+                        img.doc-inner-license_img(src="assets/images/license-1.jpg", alt="license")
+
+    // CONSULTATION
+    section.consultation-section.invert-section
+        include components/_consultation-blue

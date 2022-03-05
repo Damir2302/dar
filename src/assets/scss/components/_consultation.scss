@@ -1,0 +1,125 @@
+.invert-section {
+    background-image: url('../images/callback-bg.jpg');
+    background-repeat: no-repeat;
+}
+
+.consultation-wrapper {
+    padding: 54px 68px 14px;
+    background-color: #fff;
+    border: 1px solid #D7D7D7;
+    box-sizing: border-box;
+}
+
+.invert-section .consultation-wrapper {
+    background-color: transparent;
+}
+
+.consultation-wrapper.invert-block {
+    padding: 135px 0 70px;
+}
+
+.consultation-wrapper.invert-block {
+    border: none;
+}
+
+.consultation-title.invert-block {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    color: #fff;
+}
+
+.consultation-subtitle {
+    margin: 40px 0 25px;
+    max-width: 716px;
+    color: #979FA8;
+}
+
+.consultation-subtitle.invert-block {
+    color: #fff;
+}
+
+.cons-form-row {
+    margin: 0 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+
+.cons-input-wrapper {
+    width: 100%;
+}
+
+.cons-input {
+    width: 100%;
+}
+
+.cons-agreement {
+    width: 100%;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000;
+}
+
+.cons-agreement a {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.cons-agreement.invert-block {
+    color: #fff;
+}
+
+.cons-input::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: $icon;
+    font-size: 18px;
+}
+
+.cons-input.invert-block::after {
+    color: $orange;
+}
+
+.cons-input-name::after {
+    content: '\f007';
+    padding: 14px 21px 0 0;
+}
+
+.cons-input-phone::after {
+    content: '\f095';
+    padding: 14px 21px 0 0;
+}
+
+.cons-input-wrapper label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.cons-input-wrapper label.invert-block {
+    color: $orange;
+}
+
+.cons-input {
+    margin: 15px 0 0;
+    position: relative;
+}
+
+.cons-input input {
+    padding: 13px 25px;
+    height: 47px;
+}
+
+.cons-input input.invert-block {
+    background: transparent;
+    color: #979FA8;
+}
+
+.cons-button {
+    max-width: 182px;
+}
+

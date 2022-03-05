@@ -43,7 +43,8 @@ block header
                                 ul.navbar__submenu
 
                                     li.menu-item
-                                        a.menu-item_link(href="#") Лечение алкоголизма
+                                        .menu-item_title
+                                            a.menu-item_link(href="#") Лечение алкоголизма
                                             span.down-arrow
                                         ul.menu-subcat
                                             li
@@ -62,7 +63,8 @@ block header
                                                 a.menu-subcat_link(href="#") Лечение пивного алкоголизма
 
                                     li.menu-item
-                                        a.menu-item_link(href="#") Лечение табакокурения
+                                        .menu-item_title
+                                            a.menu-item_link(href="#") Лечение табакокурения
                                             span.down-arrow
                                         ul.menu-subcat
                                             li
@@ -83,20 +85,24 @@ block header
                                     li.menu-item
                                         a.menu-item_link(href="#") Консультация нарколога
                                     li.menu-item
-                                        a.menu-item_link(href="#") Игромания
+                                        .menu-item_title
+                                            a.menu-item_link(href="#") Игромания
+                                            span.down-arrow
                                         ul.menu-subcat
                                             li
                                                 a.menu-subcat_link(href="#") Неврозы
 
                                     li.menu-item
-                                        a.menu-item_link(href="#") Избыточный вес
+                                        .menu-item_title
+                                            a.menu-item_link(href="#") Избыточный вес
                                             span.down-arrow
                                         ul.menu-subcat
                                             li
                                                 a.menu-subcat_link(href="#") Коррекция веса
 
                                     li.menu-item
-                                        a.menu-item_link(href="#") Страхи и Фобии
+                                        .menu-item_title
+                                            a.menu-item_link(href="#") Страхи и Фобии
                                             span.down-arrow
                                         ul.menu-subcat
                                             li
@@ -123,15 +129,15 @@ block header
                                                 a.menu-subcat_link(href="#") Лечение фобий гипнозом
 
                         // Цикл
-                        .navbar__item
+                        .navbar__item(class= page_about ? 'active' : false)
                             a.navbar__link(href="#") О центре
-                        .navbar__item
+                        .navbar__item(class= page_doctors ? 'active' : false)
                             a.navbar__link(href="#") Врачи
-                        .navbar__item
+                        .navbar__item(class= page_reviews ? 'active' : false)
                             a.navbar__link(href="#") Отзывы
-                        .navbar__item
+                        .navbar__item(class= page_prices ? 'active' : false)
                             a.navbar__link(href="#") Цены
-                        .navbar__item
+                        .navbar__item(class= page_contacts ? 'active' : false)
                             a.navbar__link(href="#") Контакты
 
                     .header__top-mobile

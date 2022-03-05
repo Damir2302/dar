@@ -1,0 +1,132 @@
+.footer__main {
+    padding: 30px 0;
+    background: #F6F6F6;
+
+    @include breakpoint(md) {
+        padding: 50px 0;
+    }
+
+    @include breakpoint(lg) {
+        padding: 50px 0 0;
+    }
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(md) {
+        flex-wrap: wrap;
+        max-height: 710px;
+    }
+
+    @include breakpoint(lg) {
+        max-height: 450px;
+    }
+}
+
+.footer__menu-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__menu-link {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.footer__menu-title .down-arrow {
+
+    @include breakpoint(md) {
+        display: none;
+    }
+}
+
+.footer__menu-subcat {
+    margin: 19px 0 30px;
+    display: none;
+
+    @include breakpoint(md) {
+        margin: 19px 0 60px;
+        display: block;
+    }
+}
+
+.footer__subcat-link {
+    font-size: 13px;
+    line-height: 26px;
+}
+
+.footer__bottom-inner {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include breakpoint(lg) {
+        flex-direction: row;
+    }
+}
+
+.footer__logo {
+    max-width: 243px;
+}
+
+.footer__logo img {
+    width: 100%;
+}
+
+.footer__credits {
+    text-align: center;
+}
+
+.footer__credits p {
+    font-size: 13px;
+    line-height: 26px;
+}
+
+.footer__credits a {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.footer__phone {
+    margin: 20px 0 0;
+
+    @include breakpoint(lg) {
+        margin: 0;
+    }
+}
+
+.footer__phone a {
+    position: relative;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.footer__phone a::before {
+    content: "\f879";
+    margin-right: 8px;
+    font-family: $icon;
+    font-weight: 700;
+    font-size: 18px;
+    color: $orange;
+}
+
+.footer__phone {
+    font-size: 12px;
+    line-height: 15px;
+    color: #979FA8;
+}
+
+.footer__phone span {
+    margin-top: 8px;
+    margin-left: 26px;
+    display: inline-block;
+}
