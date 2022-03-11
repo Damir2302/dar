@@ -1,0 +1,105 @@
+.price-section {
+    padding: 60px 0 70px;
+}
+
+.price__subtext {
+    margin: 40px 0 35px;
+    color: #979FA8;
+}
+
+.price-list__title {
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.price-list {
+    margin: 0 0 40px;
+}
+
+.price-list li {
+    margin-left: 21px;
+    position: relative;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.price-list li::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -21px;
+    width: 11px;
+    height: 11px;
+    border: 3px solid #04246E;
+    border-radius: 50%;
+}
+
+.price__notify {
+    margin: 25px 0;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.price__table {
+    width: 100%;
+}
+
+.price__table th {
+    padding: 13px 29px;
+    background: $blue;
+    height: 47px;
+    font-weight: 600;
+    color: #fff;
+    text-align: left;
+}
+
+.price__table td {
+    padding: 13px 29px;
+    height: 47px;
+}
+
+.price__table tbody tr:nth-child(even) td {
+    background: #F2F2F2;
+}
+
+.price__table th:nth-child(odd) {
+    width: 66.666%;
+}
+
+.price__table td:nth-child(odd) {
+    width: 66.666%;
+    color: $blue;
+}
+
+.price__table th:nth-child(even),
+.price__table td:nth-child(even) {
+    margin-left: 30px;
+    display: inline-block;
+    width: calc(100% - 30px)
+}
+
+.price-list__text {
+    margin: 63px 0 25px;
+}
+
+.price__rules {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #04246E;
+    text-transform: uppercase;
+}
+
+.price__rules::before {
+    content: '\f1c1';
+    margin-right: 11px;
+    font-family: $icon;
+    font-size: 18px;
+    line-height: 18px;
+    color: red;
+}

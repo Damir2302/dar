@@ -1,0 +1,89 @@
+---
+title: Вакансии - Психотерапевтический центр
+page_about: true
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Вакансии', 'О центре', 'Вакансии')
+
+    section.about-section
+
+        .container
+
+            .about__wrapper
+
+                .about__left
+
+                    ul.about__cat
+                        li.about__cat-item
+                            a.about__cat-link(href="about.html") О центре
+                        li.about__cat-item
+                            a.about__cat-link(href="about-history.html") История
+                        li.about__cat-item
+                            a.about__cat-link(href="about-gallery.html") Фотогалерея
+                        li.about__cat-item
+                            a.about__cat-link(href="about-license.html")  Лицензии
+                        li.about__cat-item
+                            a.about__cat-link(href="about-release.html") Наши выпуски
+                        li.about__cat-item
+                            a.about__cat-link(href="about-article.html") Статьи
+                        li.about__cat-item
+                            a.about__cat-link(href="about-news.html") Новости
+                        li.about__cat-item
+                            a.about__cat-link(href="about-faq.html") Вопрос-ответ
+                        li.about__cat-item.active
+                            a.about__cat-link Вакансии
+
+                .about__right
+
+                    h2.vacancies__title Врач-психотерапевт/Психиатр-нарколог
+
+                    p Требуемый опыт работы: более 6 лет
+                      br
+                      | Частичная занятость, полный день
+                      br
+                      | Возможна подработка: сменами по 4-6 часов
+
+                    p.vacancies__list-title Обязанности:
+                    ul.vacancies__list
+                        li Приём и консультирование первичных пациентов
+                        li Проведение лечебных психотерапевтических сеансов
+                        li Лечение алкогольной и никотиновой зависимости
+                        li Лечение игромании
+                        li Коррекция веса
+                        li Лечение неврозов
+                        li Оформление медицинской документации
+                        li Выписка рецептов, назначений
+                        li Разъяснительная и мотивационная работа с родственниками пациента
+
+                    p.vacancies__list-title Требования:
+                    ul.vacancies__list
+                        li Специализация психиатр-нарколог, психотерапевт
+                        li Стаж работы не менее 5 лет
+                        li Действующий сертификат по психиатрии-наркологии и психотерапии
+                        li Умение проводить лечебные психотерапевтические сеансы
+                        li Наличие медицинской книжки
+                        li Контактность и коммуникабельность
+                        li Грамотная речь
+                        li Владение различными методиками лечения зависимостей будет вашим преимуществом
+
+                    p.vacancies__list-title Условия:
+                    ul.vacancies__list
+                        li Гибкий график работы
+                        li Частичная занятость
+                        li Оформление по ТК РФ
+                        li Удобное расположение недалеко от м. Павелецкая
+                        li Оплачиваемый отпуск
+                        li Дружный коллектив
+
+                    p.vacancies__phone-label Контактный телефон:
+                    a.vacancies__phone-number(href="tel:89104055487") 8-910-405-5487 Зоя Ивановна.
+
+
+    // CONSULTATION
+    section.consultation-section.invert-section
+        include components/_consultation-blue

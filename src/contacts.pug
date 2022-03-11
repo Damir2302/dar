@@ -1,0 +1,86 @@
+---
+title: Отзывы - Психотерапевтический центр
+page_contacts: true
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Контакты', 'Контакты')
+
+    section.contacts-section
+
+        .container
+
+            .contacts__wrapper
+
+                .contacts__block
+                    p.contacts-label Наши телефоны
+                    a.contacts-number(href="tel:+74951860563") +7 (495) 186-05-63
+                    span.contacts-notify Консультации по телефону:
+                        br
+                        | Ежедневно с 09:00 до 20:00
+                    span Если у Вас нет возможности позвонить нам, закажите услугу обратный звонок. Наши специалисты свяжутся с Вами в течении 15 минут.
+                    button.contacts-btn.button-style.button-style--orange Заказать обратный звонок
+
+                .contacts__block
+                    p.contacts-label Адрес клиники
+                    p.contacts-info 115054, Москва, ул. Дубининская, д. 57, стр. 2, офис 101
+
+                    p.contacts-label Режим работы:
+                    p.contacts-info с 09-00 до 17-00 ежедневно (без выходных)
+
+                    p.contacts-label Как пройти от метро:
+                    p.contacts-info Метро Павелецкая, выход с кольцевой или радиальной станции, последний вагон. Далее, пройти пешком вдоль трамвайных путей около 1 км. или проехать на трамвае № А, 3, 35, 38, 39 до остановки "Дубининская улица, 57"
+
+    // WRITE REVIEW
+    section.reviews-form-section
+        include components/_reviews
+
+        // MAP
+        .contacts-map-section
+
+            .container
+
+                h2.contacts-map__title Карта платных парковок рядом с нашим центром
+
+                #map.map-container
+                    span.map-placeholder Карта загружается…
+
+    // CONTACTS & REQUISITES
+    section.con-req-section
+
+        .container
+
+            h2.contacts__title Контакты контрольно-надзорных органов
+
+            .contacts__inner
+
+                .contacts__inner-block
+                    p.contacts__name Департамент здравоохранения г. Москвы
+                    a.contacts__phone(href="tel:+74992518300") +7 (499) 251-83-00
+                    p.contacts__address 127006, г. Москва, Оружейный переулок, д. 43
+
+                .contacts__inner-block
+                    p.contacts__name Росздравнадзор
+                    a.contacts__phone(href="tel:+74995780230") +7 (499) 578-02-30
+                    p.contacts__address 109074, г. Москва, Славянская площадь, д.4, стр.1
+
+                .contacts__inner-block
+                    p.contacts__name Роспотребнадзор
+                    a.contacts__phone(href="tel:+74999732690") +7 (499) 973-26-90
+                    p.contacts__address 127994, г. Москва, Вадковский переулок, дом 18, строение 5 и 7
+
+            h2.requisites__title Реквизиты клиники
+
+            p.requisites__text Общество с ограниченной ответственностью «Психотерапевтический центр «ДАР»
+            p.requisites__text Юридический адрес: 115054 г. Москва, ул. Дубининская, д. 57, стр. 2, этаж 1, пом. II, комн. 1
+            p.requisites__text ИНН 7725712350
+            p.requisites__text КПП 772501001
+            p.requisites__text ОГРН 5107746062012
+
+    // CONSULTATION
+    section.consultation-section.invert-section
+        include components/_consultation-blue

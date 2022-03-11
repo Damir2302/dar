@@ -287,14 +287,22 @@ button.button-style.button-style--blue {
     line-height: 20px;
     text-transform: uppercase;
 
+    @include breakpoint(lg) {
+        padding: 15px 10px;
+        margin-right: 51px;
+    }
+
     @include breakpoint(xl) {
-        padding: 15px 50px;
+        margin-right: 71px;
         font-size: 16px;
     }
 }
 
 .navbar__item.active {
-    border-top: 3px solid $blue;
+
+    @include breakpoint(lg) {
+        border-top: 3px solid $blue;
+    }
 }
 
 .navbar__item-submenu {

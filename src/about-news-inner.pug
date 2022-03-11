@@ -1,0 +1,86 @@
+---
+title: Новости - Психотерапевтический центр
+page_about: true
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Новости', 'О центре', 'Новости')
+
+    section.about-section
+
+        .container
+
+            .about__wrapper
+
+                .about__left
+
+                    ul.about__cat
+                        li.about__cat-item
+                            a.about__cat-link(href="about.html") О центре
+                        li.about__cat-item
+                            a.about__cat-link(href="about-history.html") История
+                        li.about__cat-item
+                            a.about__cat-link(href="about-gallery.html") Фотогалерея
+                        li.about__cat-item
+                            a.about__cat-link(href="about-license.html")  Лицензии
+                        li.about__cat-item
+                            a.about__cat-link(href="about-release.html") Наши выпуски
+                        li.about__cat-item
+                            a.about__cat-link(href="about-article.html") Статьи
+                        li.about__cat-item.active
+                            a.about__cat-link Новости
+                        li.about__cat-item
+                            a.about__cat-link(href="about-faq.html") Вопрос-ответ
+                        li.about__cat-item
+                            a.about__cat-link(href="about-vacancies.html") Вакансии
+
+                .about__right
+
+                    .about-news-inner(href="#")
+                        .about-news-inner__image
+                            img(src="assets/images/about-news-article.jpg", alt="img")
+                        .about-news__block
+                            h3.about-news__title Ученые заявили об опасности электронных сигарет
+                            span.about-news__date 14.06.22
+                            p.about-news-inner__text В надежде отказаться от пагубной привычки многие курильщики прибегают к использованию электронных сигарет.
+                              br
+                              br
+                              | Эти современные устройства позиционируются производителями как безвредный и быстрый способ избавления от никотиновой зависимости зависимости зависимости зависимости
+
+                    p.news-inner-content В надежде отказаться от пагубной привычки многие курильщики прибегают к использованию электронных сигарет. Эти современные устройства позиционируются производителями как безвредный и быстрый способ избавления от никотиновой зависимости.
+                      br
+                      br
+                      | В надежде отказаться от пагубной привычки многие курильщики прибегают к использованию электронных сигарет. Эти современные устройства позиционируются производителями как безвредный и быстрый способ избавления от никотиновой зависимости
+                      br
+                      br
+                      | В надежде отказаться от пагубной привычки многие курильщики прибегают к использованию электронных сигарет. Эти современные устройства позиционируются производителями как безвредный и быстрый способ избавления от никотиновой зависимости.В надежде отказаться от пагубной привычки многие курильщики прибегают к использованию электронных сигарет. Эти современные устройства позиционируются производителями как безвредный и быстрый способ избавления от никотиновой зависимости
+
+                    h3.news-inner__title Читайте также:
+
+                    .about-news__wrapper
+
+                        a.about-news(href="#")
+                            .about-news__image
+                                img(src="assets/images/news-2.jpg", alt="img")
+                            .about-news__block
+                                h3.about-news__title Курение и психические расстройства
+                                span.about-news__date 21.04.22
+                                p.about-news__text Новое исследование ученых из Королевского колледжа Великобритании, привело к, поистине, сенсационным результатам. Исходя из анализа 272.000 пациентов без никотиновой зависимости, и 15 000 курильщиков, ученые выявили, что у 57% исследуемых исследуемых исследуемых исследуемых
+
+                        a.about-news(href="#")
+                            .about-news__image
+                                img(src="assets/images/news-3.jpg", alt="img")
+                            .about-news__block
+                                h3.about-news__title Со скольки лет продавать алкоголь?
+                                span.about-news__date 11.03.22
+                                p.about-news__text 20 октября 2014 года Вероника Скворцова, глава Минздрава РФ, заявила о том, что чрезмерное употребление алкоголя и связанные с этим несчастные случаи, являются основным фактором, влияющим на продолжительность жизни мужчин в России России России России России.
+
+
+
+    // CONSULTATION
+    section.consultation-section.invert-section
+        include components/_consultation-blue

@@ -11,6 +11,10 @@ html(lang="ru")
         // Styles
         include _loadCss
 
+        // Yandex Map
+        if page_contacts
+            script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+
     body(class= bodyClass ? bodyClass : '')
 
         #page

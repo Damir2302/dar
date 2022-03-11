@@ -1,0 +1,90 @@
+---
+title: Лицензии - Психотерапевтический центр
+page_about: true
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Лицензии', 'О центре', 'Лицензии')
+
+    section.about-section
+
+        .container
+
+            .about__wrapper
+
+                .about__left
+
+                    ul.about__cat
+                        li.about__cat-item
+                            a.about__cat-link(href="about.html") О центре
+                        li.about__cat-item
+                            a.about__cat-link(href="about-history.html") История
+                        li.about__cat-item
+                            a.about__cat-link(href="about-gallery.html") Фотогалерея
+                        li.about__cat-item.active
+                            a.about__cat-link Лицензии
+                        li.about__cat-item
+                            a.about__cat-link(href="about-release.html") Наши выпуски
+                        li.about__cat-item
+                            a.about__cat-link(href="about-article.html") Статьи
+                        li.about__cat-item
+                            a.about__cat-link(href="about-news.html") Новости
+                        li.about__cat-item
+                            a.about__cat-link(href="about-faq.html") Вопрос-ответ
+                        li.about__cat-item
+                            a.about__cat-link(href="about-vacancies.html") Вакансии
+
+                .about__right
+
+                    .about-license__wrapper
+
+                        .swiper.about-license
+
+                            .swiper-wrapper
+
+                                .swiper-slide
+                                    img(src="assets/images/about-license.jpg", alt="img")
+
+                                .swiper-slide
+                                    img(src="assets/images/about-license.jpg", alt="img")
+
+                                .swiper-slide
+                                    img(src="assets/images/about-license.jpg", alt="img")
+
+                                .swiper-slide
+                                    img(src="assets/images/about-license.jpg", alt="img")
+
+                                .swiper-slide
+                                    img(src="assets/images/about-license.jpg", alt="img")
+
+                            .swiper-pagination.swiper-dots
+
+                        .swiper-arrows
+                            .swiper-button.button-prev
+                                i.far.fa-arrow-left
+                            .swiper-button.button-next
+                                i.far.fa-arrow-right
+
+                    p.about-license__title ОГРН 5107746062012
+
+                    p.about-license__text В своей профессиональной деятельности центр «ДАР» руководствуется методами и принципами, разработанными А. Р. Довженко, которые являются признанными не только в России, но и за ее пределами . Метод лечения от алкоголизма и иных зависимостей, разработанный  заслуженным врачом СССР, был принят на государственном уровне и одобрен Министерством здравоохранения.
+                      br
+                      br
+                      | На этой странице Вы можете видеть лицензию, выданную нашему центру департаментом здравоохранения г. Москвы. Ее получение означает, что подготовка врачей, используемые ими методы, оснащение центра «ДАР» полностью соответствуют строгим требованиям государственных надзорных органов. Документ действует до 29 сентября 2016 года.
+                      br
+                      br
+                      | В лицензии прописаны наши номера налогоплательщика и юридического лица, адрес местонахождения, а главное – области нашей деятельности: психиатрия и психиатрия-наркология. В соответствие с данным документом, мы имеем право оказывать медицинскую помощь в ситуациях психических нарушений, связанных с возникновением зависимости от сигарет или алкоголя, а также расстройств питания, требующих психотерапевтического вмешательства.
+                      br
+                      br
+                      | Данный документ подтверждает, что мы занимаемся своей деятельностью абсолютно законно. Вы можете быть уверены, что получите качественную помощь без какого-либо риска для здоровья.
+                      br
+                      br
+                      | Ссылка на лицензию центра в Реестре лицензий на медицинскую деятельность, выданных Департаментом здравоохранения города Москвы
+
+    // CONSULTATION
+    section.consultation-section.invert-section
+        include components/_consultation-blue

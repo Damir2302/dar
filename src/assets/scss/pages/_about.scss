@@ -1,3 +1,24 @@
+/////////////////////
+/// ABOUT PAGINATION
+/////////////////////
+
+.about-pagination {
+    margin: 28px 0 0;
+    display: flex;
+}
+
+.about-pagination-link {
+    margin-right: 15px;
+    padding: 12px 16px 24px;
+    font-weight: 500;
+    color: #979FA8;
+}
+
+.about-pagination-link.active {
+    color: #000;
+    border-bottom: 3px solid $blue;
+}
+
 //////////////////
 /// ABOUT
 //////////////////
@@ -114,6 +135,10 @@
     border-radius: 50%;
 }
 
+.about__right {
+    width: 100%;
+}
+
 //////////////////
 /// ABOUT HISTORY
 //////////////////
@@ -127,5 +152,283 @@
     font-weight: 300;
     font-size: 48px;
     line-height: 59px;
+    color: #000;
+}
+
+//////////////////
+/// ABOUT GALLERY
+//////////////////
+
+.about-gallery__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+//////////////////
+/// ABOUT LICENSE
+//////////////////
+
+.about-license__wrapper {
+    margin: 0 auto;
+    position: relative;
+    max-width: 418px;
+}
+
+.about-license {
+    margin: 0 auto;
+    padding: 0 0 40px;
+}
+
+.about-license__title {
+    margin: 32px 0 37px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.about-license__text {
+    color: #979FA8;
+}
+
+.about-license__wrapper .swiper-pagination.swiper-dots {
+    bottom: 0;
+}
+
+.about-license__wrapper .swiper-pagination-bullet {
+    background: $orange;
+}
+
+.about-license__wrapper .swiper-pagination-bullet-active {
+    background: #04246E;
+}
+
+.about-license__wrapper .swiper-pagination-bullet-active::after {
+    border: 1px solid #000;
+}
+
+.about-license__wrapper .swiper-arrows {
+    top: 300px;
+    left: -44px;
+    width: calc(100% + 88px);
+}
+
+//////////////////
+/// ABOUT RELEASE
+//////////////////
+
+.about-release__text {
+    margin: 0 0 37px;
+    max-width: 588px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.about-release__title {
+    margin: 32px 0;
+}
+
+.about-release__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.about-release__video {
+    width: 48%;
+    height: 379px;
+}
+
+//////////////////
+/// ABOUT NEWS
+//////////////////
+
+.about-news {
+    padding: 20px 28px 20px 20px;
+    display: flex;
+    column-gap: 30px;
+    border: 1px solid #D7D7D7;
+    border-bottom: none;
+}
+
+.about-news:last-child {
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.about-news__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #04246E;
+}
+
+.about-news__date {
+    margin: 14px 0 12px 20px;
+    position: relative;
+    display: inline-block;
+    line-height: 28px;
+    color: #888888;
+}
+
+.about-news__date::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    width: 11px;
+    height: 11px;
+    border: 3px solid #04246E;
+    border-radius: 50%;
+}
+
+.about-news__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.about-news__text a {
+    display: inline;
+    color: #04246E;
+    text-decoration: underline;
+}
+
+.news-inner__title {
+    margin: 60px 0 50px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.about-news-inner {
+    display: flex;
+    column-gap: 30px;
+}
+
+.about-news-inner__image {
+    width: 100%;
+    min-width: 341px;
+}
+
+.about-news-inner__image img {
+    width: 100%;
+}
+
+.about-news-inner__text {
+    font-weight: 500;
+}
+
+.news-inner-content {
+    margin: 32px 0 0;
+}
+
+//////////////////
+/// ABOUT FAQ
+//////////////////
+
+.faq__block {
+    margin: 0 0 50px;
+    padding: 21px 21px 25px;
+    position: relative;
+    min-height: 300px;
+    border: 1px solid #D8D8D8;
+}
+
+.faq__block::before {
+    content: '\f059';
+    background: #fff;
+    position: absolute;
+    top: -21.5px;
+    left: 14px;
+    font-family: $icon;
+    font-weight: 900;
+    font-size: 43px;
+    line-height: 43px;
+    color: $orange;
+}
+
+.faq__block-name {
+    margin: 0 0 12px;
+    display: block;
+    font-weight: 300;
+    color: $blue;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.faq__block-q  {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000;
+}
+
+.faq__block-answer {
+    margin: 25px 0;
+    display: block;
+    font-weight: 300;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.faq__block-a {
+    font-weight: 500;
+}
+
+////////////////////
+/// ABOUT VACANCIES
+////////////////////
+
+.vacancies__title {
+    margin: 0 0 32px;
+}
+
+.vacancies__list-title {
+    margin: 35px 0 25px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.vacancies__list li {
+    margin-left: 21px;
+    position: relative;
+    font-size: 16px;
+    line-height: 32px;
+    color: $blue;
+}
+
+.vacancies__list li::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -21px;
+    width: 11px;
+    height: 11px;
+    border: 3px solid #04246E;
+    border-radius: 50%;
+}
+
+.vacancies__phone-label {
+    margin: 80px 0 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+}
+
+.vacancies__phone-number {
+    margin: 30px 0 0;
+    font-size: 18px;
+    line-height: 22px;
     color: #000;
 }

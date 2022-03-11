@@ -1,0 +1,63 @@
+---
+title: Наши выпуски - Психотерапевтический центр
+page_about: true
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Наши выпуски', 'О центре', 'Наши выпуски')
+
+    section.about-section
+
+        .container
+
+            .about__wrapper
+
+                .about__left
+
+                    ul.about__cat
+                        li.about__cat-item
+                            a.about__cat-link(href="about.html") О центре
+                        li.about__cat-item
+                            a.about__cat-link(href="about-history.html") История
+                        li.about__cat-item
+                            a.about__cat-link(href="about-gallery.html") Фотогалерея
+                        li.about__cat-item
+                            a.about__cat-link(href="about-license.html")  Лицензии
+                        li.about__cat-item.active
+                            a.about__cat-link Наши выпуски
+                        li.about__cat-item
+                            a.about__cat-link(href="about-article.html") Статьи
+                        li.about__cat-item
+                            a.about__cat-link(href="about-news.html") Новости
+                        li.about__cat-item
+                            a.about__cat-link(href="about-faq.html") Вопрос-ответ
+                        li.about__cat-item
+                            a.about__cat-link(href="about-vacancies.html") Вакансии
+
+                .about__right
+
+                    p.about-release__text В издании всероссийской общественно-политической газете "Властная вертикаль ФЕДЕРАЦИИ", в рубрике здоровье, напечатали интервью с генеральным директором нашего психотерапевтического центра “ДАР”
+
+                    .about-release__image
+                        img(src="assets/images/about-release.jpg", alt="img")
+
+                    h2.about-release__title Наши выпуски
+
+                    .about-release__wrapper
+
+                        iframe.about-release__video(width="560" height="315" src="https://www.youtube.com/embed/zZtv62aoND4?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                        iframe.about-release__video(width="560" height="315" src="https://www.youtube.com/embed/LPkVEfLS8sQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                        iframe.about-release__video(width="560" height="315" src="https://www.youtube.com/embed/vOOtcf1-5Qw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                        iframe.about-release__video(width="560" height="315" src="https://www.youtube.com/embed/U2Ycmmju5pU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                        iframe.about-release__video(width="560" height="315" src="https://www.youtube.com/embed/Z2aL7QU7xhU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                        iframe.about-release__video(width="560" height="315" src="https://www.youtube.com/embed/flJWHWJg51I?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                        iframe.about-release__video(width="560" height="315" src="https://www.youtube.com/embed/flJWHWJg51I?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+
+    // CONSULTATION
+    section.consultation-section.invert-section
+        include components/_consultation-blue

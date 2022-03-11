@@ -1,0 +1,89 @@
+---
+title: Вопрос-ответ - Психотерапевтический центр
+page_about: true
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Вопрос-ответ', 'О центре', 'Вопрос-ответ')
+
+    section.about-section
+
+        .container
+
+            .about__wrapper
+
+                .about__left
+
+                    ul.about__cat
+                        li.about__cat-item
+                            a.about__cat-link(href="about.html") О центре
+                        li.about__cat-item
+                            a.about__cat-link(href="about-history.html") История
+                        li.about__cat-item
+                            a.about__cat-link(href="about-gallery.html") Фотогалерея
+                        li.about__cat-item
+                            a.about__cat-link(href="about-license.html")  Лицензии
+                        li.about__cat-item
+                            a.about__cat-link(href="about-release.html") Наши выпуски
+                        li.about__cat-item
+                            a.about__cat-link(href="about-article.html") Статьи
+                        li.about__cat-item
+                            a.about__cat-link(href="about-news.html") Новости
+                        li.about__cat-item.active
+                            a.about__cat-link Вопрос-ответ
+                        li.about__cat-item
+                            a.about__cat-link(href="about-vacancies.html") Вакансии
+
+                .about__right
+
+                    .faq__container
+
+                        .faq__block
+                            span.faq__block-name Наталья спрашивает
+                            p.faq__block-q Здравствуйте,скажите пожалуйста после кодирования человек сможет пить пиво или вино? Или он вообще больше не захочет употреблять никакой алкоголь даже в маленьком количестве?
+                            span.faq__block-answer Отвечаем
+                            p.faq__block-a Добрый день, Наталья! Лечение от алкогольной зависимости в нашем центре направленно на избавление от психической зависимости от алкоголя, то есть снимается тяга и желание к употреблению любых спиртных напитков. После прохождения лечения необходим полный отказ от употребления алкогольных напитков, безалкогольного пива и вина, домашнего кваса и т.д. С уважением, Центр ДАР.
+
+                        .faq__block
+                            span.faq__block-name Елена спрашивает
+                            p.faq__block-q Здравствуйте. Сколько дней до сеанса надо не принимать алкоголь вообще и можно ли выпить безалкогольное пиво? Cпасибо.
+                            span.faq__block-answer Отвечаем
+                            p.faq__block-a Добрый день, Елена! Для кодирования по методу Довженко необходимо воздержание от употребления алкоголя от 7-ми полных дней. Так же следует исключить спиртосодержащие лекарственные средства и настойки, безалкогольное пиво и вино. Психотропные и снотворное отменить за 3 дня до сеанса. С уважением, Центр ДАР.
+
+                        .faq__block
+                            span.faq__block-name Светлана спрашивает
+                            p.faq__block-q Добрый день! Почти три года назад я закадировалась от алкоголизма у А.Л. Воронцова. Буду благодарить этого человека всегда и везде! Я не пью и не хочу, мои дети уже давно не боятся, что мама пока готовит ужин- напьется пьяная. Но у меня еще одна прблема- не могу бросить курить. Скажите, можно ли уже кодируясь от алкоголизма, закодироваться от курения? Спасибо.
+                            span.faq__block-answer Отвечаем
+                            p.faq__block-a Добрый день, Светлана! Да, кодирование от никотиновой зависимости возможно  через 2-3 месяца после лечения от алкоголизма.
+
+                        .faq__block
+                            span.faq__block-name Вопрос
+                            p.faq__block-q Добрый день. Двадцать лет назад мой отец бросил пить с вашей помощью. Огромное вам за это спасибо. Занимаетесь ли вы проблемами наркозависимости? У хорошей знакомой приключилась такая беда с сыном. В наркоклинику сдавать боятся.
+                            span.faq__block-answer Отвечаем
+                            p.faq__block-a Здравствуйте! К сожалению, лечением наркозависимых пациентов мы не занимаемся
+
+                        .faq__block
+                            span.faq__block-name Вопрос
+                            p.faq__block-q Здравствуйте! Скажите, чем отличается лечебный сеанс табакозависимости от индивидуального?....что на лечебном сеансе присутствуют не только я и врач, а еще  кто-то?
+                            span.faq__block-answer Отвечаем
+                            p.faq__block-a Здравствуйте! Лечебный сеанс от табачной зависимости врач проводит с небольшой группой пациентов, а индивидуальный сеанс подразумевает работу врача только с вами одной.
+
+
+                    .about-pagination
+                        a.about-pagination-link.active(href="#") 1
+                        a.about-pagination-link(href="#") 2
+                        a.about-pagination-link(href="#") 3
+                        a.about-pagination-link(href="#") 4
+                        a.about-pagination-link(href="#") 5
+
+    // WRITE REVIEW
+    section.reviews-form-section
+        include components/_reviews
+
+    // CONSULTATION
+    section.consultation-section.invert-section
+        include components/_consultation-blue
