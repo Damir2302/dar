@@ -16,8 +16,25 @@ if ($('.specialistes__slider').length) {
   let specialistes__slider = new Swiper('.specialistes__slider', {
     direction: 'horizontal',
     loop: true,
-    spaceBetween: 30,
-    slidesPerView: 4,
+    spaceBetween: 10,
+    slidesPerView: 1,
+
+    breakpoints: {
+      470: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+
+      1180: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      }
+    },
 
     pagination: {
       el: '.swiper-pagination',
@@ -33,33 +50,45 @@ if ($('.specialistes__slider').length) {
   });
 }
 
-// if ($('.other-s').length) {
-//   let other_s = new Swiper('.other-s', {
-//     direction: 'horizontal',
-//     loop: true,
-//     spaceBetween: 30,
-//     slidesPerView: 4,
+if ($('.other-s').length && $(window).width() < 991) {
+  let other_s = new Swiper('.other-s', {
+    direction: 'horizontal',
+    spaceBetween: 15,
+    slidesPerView: 1,
 
-//     pagination: {
-//       el: '.swiper-pagination',
-//       type: 'bullets',
-//       clickable: true
-//     },
+    breakpoints: {
+      470: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
 
-//     navigation: {
-//       nextEl: '.button-next',
-//       prevEl: '.button-prev',
-//     }
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      }
+    }
 
-//   });
-// }
+  });
+}
 
 if ($('.gallery__slider').length) {
   let gallery__slider = new Swiper('.gallery__slider', {
     direction: 'horizontal',
     loop: true,
-    spaceBetween: 30,
-    slidesPerView: 4,
+    slidesPerView: 1,
+
+    breakpoints: {
+
+      576: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+
+      1180: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      }
+    },
 
     pagination: {
       el: '.swiper-pagination',
@@ -79,8 +108,20 @@ if ($('.license__slider').length) {
   let license__slider = new Swiper('.license__slider', {
     direction: 'horizontal',
     loop: true,
-    spaceBetween: 30,
-    slidesPerView: 4,
+    slidesPerView: 1,
+
+    breakpoints: {
+
+      576: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+
+      1180: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      }
+    },
 
     pagination: {
       el: '.swiper-pagination',
@@ -100,8 +141,20 @@ if ($('.question__slider').length) {
   let question__slider = new Swiper('.question__slider', {
     direction: 'horizontal',
     loop: true,
-    spaceBetween: 30,
-    slidesPerView: 3,
+    slidesPerView: 1,
+    
+    breakpoints: {
+
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+
+      1180: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      }
+    },
 
     pagination: {
       el: '.swiper-pagination',

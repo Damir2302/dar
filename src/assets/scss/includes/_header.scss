@@ -155,6 +155,16 @@ button.button-style.button-style--blue {
     }
 }
 
+.header__menu-mobile i {
+    display: none;
+    width: 24.5px;
+    text-align: center;
+}
+
+.header__menu-mobile i.active {
+    display: block;
+}
+
 .header__nav {
     position: relative;
     border-top: 1px solid #DEF2FD;
@@ -165,6 +175,7 @@ button.button-style.button-style--blue {
     position: relative;
     top: 0;
     left: -20px;
+    display: none;
     width: calc(100% + 40px);
 
     @include breakpoint(lg) {

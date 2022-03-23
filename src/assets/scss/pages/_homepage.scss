@@ -4,15 +4,24 @@
 
 .slider-container {
     padding: 123px 0 85px;
+    
+    @include breakpointMax(sm) {
+        padding: 80px 0;
+        background: linear-gradient(270deg, #05256F 0%, rgba(5, 37, 111, 0) 13.66%), linear-gradient(90deg, #04246E 44%, rgba(4, 36, 110, 0.5) 100%)!important;
+    }
 }
 
 .hero__title {
     max-width: 525px;
     font-weight: 300;
-    font-size: 36px;
+    font-size: 20px;
     line-height: 40px;
     color: $orange;
     text-transform: uppercase;
+
+    @include breakpoint(sm) {
+        font-size: 36px;
+    }
 }
 
 .hero__title span {
@@ -54,12 +63,23 @@
 
 .services__wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     column-gap: 30px;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+    }
 }
 
 .service__block {
-    width: 33.333%;
+    margin: 0 0 30px;
+    width: 100%;
+
+    @include breakpoint(md) {
+        margin: 0;
+        width: 33.333%;
+    }
 }
 
 .service__image img {
@@ -67,10 +87,15 @@
 }
 
 .service__title {
-    margin: 20px 0;
+    margin: 10px 0;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
+    
+    @include breakpoint(md) {
+        margin: 20px 0;
+        font-size: 24px;
+    }
 }
 
 .service__subtitle {
@@ -86,7 +111,7 @@
     margin-right: 17px;
     background: $blue;
     display: block;
-    width: 12px;
+    min-width: 12px;
     height: 12px;
 }
 
@@ -95,16 +120,29 @@
 ////////////////
 
 .specialistes-section {
-    padding: 42px 0 70px;
+    padding: 42px 0 30px;
     background: linear-gradient(180deg, rgba(215, 215, 215, 0.2) 0%, rgba(246, 246, 246, 0) 100%);
+
+    @include breakpoint(lg) {
+        padding: 42px 0 70px;
+    }
 }
 
 .specialistes-title {
-    margin: 0 0 40px;
+    margin: 0 0 30px;
+
+    @include breakpoint(md) {
+        margin: 0 0 40px;
+    }
 }
 
 .specialistes__slider {
     padding: 0 0 70px;
+    max-width: 900px;
+
+    @include breakpoint(xl) {
+        max-width: 100%;
+    }
 }
 
 .specialistes__title {
@@ -119,6 +157,10 @@
     font-size: 14px;
     line-height: 17px;
     color: #979FA8;
+}
+
+.specialistes__image img {
+    width: 100%;
 }
 
 .specialistes-section .swiper-pagination.swiper-dots {
@@ -148,11 +190,20 @@
 .cons__inner {
     margin: 15px 0 0;
     display: flex;
+    flex-direction: column;
     column-gap: 32px;
+
+    @include breakpoint(lg) {
+        flex-direction: row;
+    }
 }
 
 .cons__block {
-    width: 50%;
+    margin: 0 0 30px;
+
+    @include breakpoint(lg) {
+        width: 50%;
+    }
 }
 
 .cons__title {
@@ -171,13 +222,23 @@
 
 .cons__inblock {
     display: flex;
+    flex-direction: column;
     column-gap: 28px;
+
+    @include breakpoint(xs) {
+        flex-direction: row;
+    }
 }
 
 .cons-tile {
+    margin: 0 0 15px;
     padding: 16px;
     border: 5px solid #05256F;
     box-sizing: border-box;
+
+    @include breakpoint(xs) {
+        margin: 0
+    }
 }
 
 .cons-tile span {
@@ -194,9 +255,13 @@
 
 .tile-number {
     font-weight: bold;
-    font-size: 72px;
+    font-size: 60px;
     line-height: 88px;
     color: $orange;
+
+    @include breakpoint(sm) {
+        font-size: 72px;
+    }
 }
 
 .tile-text {
@@ -221,7 +286,11 @@
 }
 
 .cons__image {
-    margin: 35px 0 0 ;
+    margin: 58px 0 0 ;
+
+    @include breakpoint(lg) {
+        margin: 35px 0 0 ;
+    }
 }
 
 // OTHER SERVICES
@@ -232,29 +301,49 @@
 }
 
 .other-s__title {
-    margin: 0 0 70px;
+    margin: 0 0 20px;
+    max-width: 285px;
+
+    @include breakpoint(md) {
+        max-width: 100%;
+    }
+    
+    @include breakpoint(lg) {
+        margin: 0 0 70px;
+    }
 }
 
 .other-s__btn {
+    margin: 0 0 30px;
     padding: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     max-width: 192px;
     border: 1px solid #34454F;
+
+    @include breakpoint(lg) {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right: 25px;
+    }
 }
 
 .other-s__wrapper {
-    flex-wrap: wrap;
-    gap: 28px;
+
+    @include breakpoint(lg) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 28px;
+    }
 }
 
 .other-s__block {
     background: $blue;
+    display: flex;
+    flex-direction: column;
     width: 23%;
     height: auto;
     box-sizing: border-box;
@@ -279,9 +368,13 @@
 .other-s_title {
     margin: 11px 0;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     color: $orange;
+
+    @include breakpoint(md) {
+        font-size: 24px;
+    }
 }
 
 .other-s_price {
@@ -299,6 +392,7 @@
 }
 
 .other-s_image {
+    margin-top: auto;
     position: relative;
 }
 
@@ -352,6 +446,8 @@
 .intervention-section::after {
     content: '';
     background: linear-gradient(270deg, rgba(5, 37, 111, 0.58) 11.12%, rgba(5, 37, 111, 0) 47.34%), url('../images/intervention-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -375,19 +471,35 @@
 .intervention__wrapper {
     position: relative;
     display: flex;
-    column-gap: 30px;
+    flex-direction: column;
+    row-gap: 48px;
     z-index: 1;
+
+    @include breakpoint(lg) {
+        flex-direction: row;
+        column-gap: 30px;
+        row-gap: unset;
+    }
 }
 
 .intervention__block {
-    width: 50%;
+
+    @include breakpoint(lg) {
+        margin-left: 10px;
+        width: 50%;
+    }
 }
 
 .int-method {
     margin: 0 0 10px;
     display: flex;
-    max-width: 490px;
+    flex-direction: column;
     color: #fff;
+
+    @include breakpoint(sm) {
+        flex-direction: row;
+        max-width: 490px;
+    }
 }
 
 .int-method:last-child {
@@ -395,28 +507,45 @@
 }
 
 .int-block_count {
-    margin: 16px 0 0;
+    margin: 0 auto 40px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: $orange;
+
+    @include breakpoint(sm) {
+        margin: 16px 0 0;
+        margin-left: 20px;
+    }
+
+    @include breakpoint(lg) {
+        margin-left: 0;
+    }
 }
 
 .int-block_count::before {
     content: url('../images/ico].svg');
     position: absolute;
     top: -10px;
-    left: -20px;
+    left: -40px;
+
+    @include breakpoint(sm) {
+        left: -20px;
+    }
 }
 
 .int-block_count::after {
     content: url('../images/ico[.svg');
     position: absolute;
     top: -10px;
-    right: -20px;
+    right: -40px;
     font-weight: 300;
     font-size: 98px;
+
+    @include breakpoint(sm) {
+        right: -20px;
+    }
 }
 
 .int-block_number {
@@ -430,19 +559,32 @@
 }
 
 .int-block_desc {
-    margin-left: 58px;
+
+    @include breakpoint(sm) {
+        margin-left: 58px;
+    }
 }
 
 .int-block_title {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
+    text-align: center;
+
+    @include breakpoint(sm) {
+        text-align: unset;
+    }
 }
 
 .int-block_text {
     margin: 17px 0 26px;
     display: inline-block;
     color: #E5E5E5;
+    text-align: center;
+
+    @include breakpoint(sm) {
+        text-align: unset;
+    }
 }
 
 .int-wrapper {
@@ -466,10 +608,14 @@
 .int-phone {
     margin: 30px 0;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 44px;
     text-align: center;
     color: #FFFFFF;
+
+    @include breakpoint(sm) {
+        font-size: 36px;
+    }
 }
 
 .int-subtext {
@@ -505,6 +651,10 @@
 
 .gallery__slider {
     padding: 0 0 50px;
+}
+
+.gallery__image img {
+    width: 100%;
 }
 
 .gallery-section .swiper-arrows {
@@ -544,16 +694,35 @@
 
 .benefits__wrapper {
     display: flex;
-    column-gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 20px;
+
+    @include breakpoint(xl) {
+        flex-wrap: nowrap;
+        justify-content: unset;
+        column-gap: 30px;
+        row-gap: 0;
+    }
 }
 
 .benefits__block {
     background-position: center top;
     background-repeat: no-repeat;
     background-color: $blue;
+    background-size: cover;
     position: relative;
-    width: 25%;
     height: 488px;
+
+    @include breakpoint(sm) {
+        width: 45%;
+    }
+
+    @include breakpoint(xl) {
+        background-size: unset;
+        width: 25%;
+    }
 }
 
 .benefits__block::before {
@@ -586,16 +755,20 @@
 }
 
 .benefits__content {
-    padding: 250px 18px 18px;
+    padding: 268px 18px 18px;
     position: relative;
     z-index: 1;
 }
 
 .benefits__content-title {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     color: $orange;
+
+    @include breakpoint(md) {
+        font-size: 24px;
+    }
 }
 
 .benefits__content-text {
@@ -618,6 +791,10 @@
 
 .license__slider {
     padding: 0 0 50px;
+}
+
+.license__image img {
+    width: 100%;
 }
 
 .license-section .swiper-arrows {
@@ -742,25 +919,54 @@
 ////////////////////
 
 .b-banner-section {
-    padding: 61px 77px;
+    padding: 61px 20px;
     background: $blue;
+    
+    @include breakpoint(lg) {
+        padding: 61px 77px;
+    }
 }
 
 .b-banner__wrapper {
     display: flex;
+    flex-direction: column;
     column-gap: 30px;
     color: #fff;
+
+    @include breakpoint(lg) {
+        flex-direction: row;
+    }
+}
+
+.b-banner__left {
+    
+    @include breakpoint(sm) {
+        display: flex;
+        justify-content: center;
+        column-gap: 30px;
+        }
+
+    @include breakpoint(lg) {
+        display: block;
+    }
 }
 
 .b-banner__block {
-    margin: 0 0 28px;
+    margin: 0 auto 28px;
     padding: 45px 20px 20px;
+    background-size: cover;
     position: relative;
-    width: 362px;
-    height: 385px;
+    height: 275px;
     text-align: center;
     border: 1px solid #6C8393;
     box-sizing: border-box;
+
+    @include breakpoint(sm) {
+        margin: 0 0 28px;
+        background-size: unset;
+        width: 362px;
+        height: 385px;
+    }
 }
 
 .b-banner__block:last-child {
@@ -790,11 +996,15 @@
     margin: 28px 0;
     position: relative;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     text-align: center;
     color: $orange;
     z-index: 1;
+
+    @include breakpoint(md) {
+        font-size: 24px;
+    }
 }
 
 .b-banner__block .b-link {

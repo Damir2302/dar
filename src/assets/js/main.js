@@ -1,15 +1,19 @@
 $(document).ready(function() {
 
-    if ($(window).width() < 991) {
+    // SLIDER TOGGLE MENU (HEADER & FOOTER)
+    $('.header__menu-mobile').on('click', function() {
+      $(this).find('i').toggleClass('active');
+      $('.nav__inner').slideToggle();
+    });
 
-        $('.nav__item-menu').on('click', function() {
-            $('.navbar__submenu').slideToggle();
-        });
+    $('.nav__item-menu').on('click', function() {
+        $('.navbar__submenu').slideToggle();
+    });
 
-        $('.down-arrow').on('click', function() {
-            $(this).parent().parent().find('.menu-subcat, .footer__menu-subcat').slideToggle();
-        });
-    }
+    $('.down-arrow').on('click', function() {
+        $(this).parent().parent().find('.menu-subcat, .footer__menu-subcat').slideToggle();
+    });
+    
 
     // DOCTORS
     $(function () {

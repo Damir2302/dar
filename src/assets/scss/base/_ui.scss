@@ -121,9 +121,13 @@ h2 {
 
 .section-title {
     font-weight: 500;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 37px;
     color: #000;
+    
+    @include breakpoint(md) {
+        font-size: 30px;
+    }
 }
 
 /////////////
