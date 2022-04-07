@@ -35,8 +35,35 @@
 }
 
 .doc-inner-info {
-    margin: 35px 0 50px;
+    margin: 35px 0 30px;
     color: #979FA8;
+}
+
+.doc-inner-info h2 {
+    margin: 50px 0 20px;
+}
+
+.doc-inner-info ul {
+    margin: 0 0 30px;
+}
+
+.doc-inner-info li {
+    margin-left: 31px;
+    position: relative;
+    font-size: 16px;
+    line-height: 32px;
+    color: $blue;
+}
+
+.doc-inner-info li::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -32px;
+    width: 11px;
+    height: 11px;
+    border: 3px solid #04246E;
+    border-radius: 50%;
 }
 
 .doc-inner-title_list {
@@ -77,8 +104,4 @@
 .doc-inner-license_img {
     width: 22%;
     cursor: zoom-in;
-}
-
-.doc-inner-license_img.cp-lightimg {
-    cursor: zoom-out;
 }

@@ -44,7 +44,8 @@ const path = {
         pughtml:   srcPath + "**/*.pug",
         html:   srcPath + "**/*.html",
         js:     srcPath + "assets/js/**/*.js",
-        css:    srcPath + "assets/scss/*.{sass,scss}",
+        scss:   srcPath + "assets/scss/*.{sass,scss}",
+        css:    srcPath + "assets/scss/**/*.css",
         img:    srcPath + "assets/images/**/*.{cur,jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         svg:    srcPath + "assets/icons/*.svg",
         fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
@@ -53,7 +54,8 @@ const path = {
         pughtml:   srcPath + "**/*.pug",
         html:   srcPath + "**/*.html",
         js:     srcPath + "assets/js/**/*.js",
-        css:    srcPath + "assets/scss/**/*.{sass,scss}",
+        scss:   srcPath + "assets/scss/**/*.{sass,scss}",
+        css:    srcPath + "assets/scss/**/*.css",
         img:    srcPath + "assets/images/**/*.{cur,jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         svg:    srcPath + "assets/icons/*.svg",
         fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
@@ -97,8 +99,8 @@ function html(cb) {
     cb();
 }
 
-function css(cb) {
-    return src(path.src.css, {base: srcPath + "assets/scss/"})
+function scss(cb) {
+    return src(path.src.scss, {base: srcPath + "assets/scss/"})
         .pipe(plumber({
             errorHandler : function(err) {
                 notify.onError({
@@ -144,8 +146,8 @@ function css(cb) {
     cb();
 }
 
-function cssWatch(cb) {
-    return src(path.src.css, {base: srcPath + "assets/scss/"})
+function scssWatch(cb) {
+    return src(path.src.scss, {base: srcPath + "assets/scss/"})
         .pipe(plumber({
             errorHandler : function(err) {
                 notify.onError({
@@ -174,6 +176,22 @@ function cssWatch(cb) {
             extname: ".css"
         }))
         .pipe(sourcemaps.write('.'))
+        .pipe(dest(path.build.css))
+        .pipe(browserSync.reload({stream: true}));
+
+    cb();
+}
+
+function css(cb) {
+    return src(path.src.css)
+        .pipe(dest(path.build.css))
+        .pipe(browserSync.reload({stream: true}));
+
+    cb();
+}
+
+function cssWatch(cb) {
+    return src(path.src.css)
         .pipe(dest(path.build.css))
         .pipe(browserSync.reload({stream: true}));
 
@@ -303,6 +321,7 @@ function clean(cb) {
 function watchFiles() {
     gulp.watch([path.watch.pughtml], pughtml);
     gulp.watch([path.watch.html], html);
+    gulp.watch([path.watch.scss], scssWatch);
     gulp.watch([path.watch.css], cssWatch);
     gulp.watch([path.watch.js], jsWatch);
     gulp.watch([path.watch.img], img);
@@ -310,7 +329,7 @@ function watchFiles() {
     gulp.watch([path.watch.fonts], fonts);
 }
 
-const build = gulp.series(clean, gulp.parallel(pughtml, html, css, js, jsPlugins, img, fonts, svg));
+const build = gulp.series(clean, gulp.parallel(pughtml, html, scss, css, js, jsPlugins, img, fonts, svg));
 const watch = gulp.parallel(build, watchFiles, serve);
 
 
@@ -318,6 +337,7 @@ const watch = gulp.parallel(build, watchFiles, serve);
 /* Exports Tasks */
 exports.pughtml = pughtml;
 exports.html = html;
+exports.scss = scss;
 exports.css = css;
 exports.js = js;
 exports.js = jsPlugins;

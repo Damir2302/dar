@@ -1,26 +1,18 @@
 $(document).ready(function() {
 
     // SLIDER TOGGLE MENU (HEADER & FOOTER)
-    $('.header__menu-mobile').on('click', function() {
-      $(this).find('i').toggleClass('active');
-      $('.nav__inner').slideToggle();
-    });
+    if ($(window).width() < 991) {
 
-    $('.nav__item-menu').on('click', function() {
-        $('.navbar__submenu').slideToggle();
-    });
+      $('.header__menu-mobile').on('click', function() {
+        $(this).find('i').toggleClass('active');
+        $('.nav__inner').slideToggle();
+      });
 
-    $('.down-arrow').on('click', function() {
-        $(this).parent().parent().find('.menu-subcat, .footer__menu-subcat').slideToggle();
-    });
-    
+      $('.down-arrow').on('click', function() {
+          $(this).parent().parent().find('.navbar__submenu, .menu-subcat, .footer__menu-subcat').slideToggle();
+      });
 
-    // DOCTORS
-    $(function () {
-        $(document).on("click", ".doc-inner-license_img, .cpLightimg", function () {
-          $(this).cpLightimg();
-        });
-    });
+    }
 
     // ABOUT
     if ($('.about-license').length) {

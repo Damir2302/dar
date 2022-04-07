@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+.consultation-form ::placeholder {
+    color: inherit;
+}
+
 .invert-section .consultation-wrapper {
     background-color: transparent;
 }

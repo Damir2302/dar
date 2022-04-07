@@ -125,6 +125,17 @@
     border-bottom: 1px solid #D7D7D7;
 }
 
+.docs__photo {
+    min-width: 193px;
+    max-width: 193px;
+    max-height: 222px;
+    overflow: hidden;
+}
+
+.docs__photo img {
+    object-fit: cover;
+}
+
 .docs__info {
     margin-left: 40px;
 }

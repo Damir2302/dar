@@ -38,14 +38,16 @@ block header
                     nav.navbar
 
                         .navbar__menu
-                            .navbar__item-submenu.navbar__item
-                                span.nav__item-menu Услуги лечения
+                            .navbar__item.navbar__item-submenu.navbar-burger-icon
+                                .navbar__link
+                                    a(href="#") Услуги лечения
+                                    span.down-arrow
 
                                 ul.navbar__submenu
 
                                     li.menu-item
-                                        .menu-item_title
-                                            a.menu-item_link(href="#") Лечение алкоголизма
+                                        .menu-item_link
+                                            a(href="#") Лечение алкоголизма
                                             span.down-arrow
                                         ul.menu-subcat
                                             li
@@ -64,8 +66,8 @@ block header
                                                 a.menu-subcat_link(href="#") Лечение пивного алкоголизма
 
                                     li.menu-item
-                                        .menu-item_title
-                                            a.menu-item_link(href="#") Лечение табакокурения
+                                        .menu-item_link
+                                            a(href="#") Лечение табакокурения
                                             span.down-arrow
                                         ul.menu-subcat
                                             li
@@ -74,36 +76,42 @@ block header
                                                 a.menu-subcat_link(href="#") Кодирование от табакокурения
 
                                     li.menu-item
-                                        a.menu-item_link(href="#") Шопоголизм
+                                        .menu-item_link
+                                            a(href="#") Шопоголизм
                                     li.menu-item
-                                        a.menu-item_link(href="#") Стрессы
+                                        .menu-item_link
+                                            a(href="#") Стрессы
                                     li.menu-item
-                                        a.menu-item_link(href="#") Созависимость
+                                        .menu-item_link
+                                            a(href="#") Созависимость
                                     li.menu-item
-                                        a.menu-item_link(href="#") Депрессия
+                                        .menu-item_link
+                                            a(href="#") Депрессия
                                     li.menu-item
-                                        a.menu-item_link(href="#") Консультация психотерапевта
+                                        .menu-item_link
+                                            a(href="#") Консультация психотерапевта
                                     li.menu-item
-                                        a.menu-item_link(href="#") Консультация нарколога
+                                        .menu-item_link
+                                            a(href="#") Консультация нарколога
                                     li.menu-item
-                                        .menu-item_title
-                                            a.menu-item_link(href="#") Игромания
+                                        .menu-item_link
+                                            a(href="#") Игромания
                                             span.down-arrow
                                         ul.menu-subcat
                                             li
                                                 a.menu-subcat_link(href="#") Неврозы
 
                                     li.menu-item
-                                        .menu-item_title
-                                            a.menu-item_link(href="#") Избыточный вес
+                                        .menu-item_link
+                                            a(href="#") Избыточный вес
                                             span.down-arrow
                                         ul.menu-subcat
                                             li
                                                 a.menu-subcat_link(href="#") Коррекция веса
 
                                     li.menu-item
-                                        .menu-item_title
-                                            a.menu-item_link(href="#") Страхи и Фобии
+                                        .menu-item_link
+                                            a(href="#") Страхи и Фобии
                                             span.down-arrow
                                         ul.menu-subcat
                                             li
@@ -130,8 +138,37 @@ block header
                                                 a.menu-subcat_link(href="#") Лечение фобий гипнозом
 
                         // Цикл
-                        .navbar__item(class= page_about ? 'active' : false)
-                            a.navbar__link(href="#") О центре
+                        .navbar__item.navbar__item-submenu(class= page_about ? 'active' : false)
+                            .navbar__link
+                                a(href="#") О центре
+                                span.down-arrow
+
+                            ul.navbar__submenu
+                                li.menu-item
+                                    .menu-item_link
+                                        a(href="#") История
+                                li.menu-item
+                                    .menu-item_link
+                                        a(href="#") Фотогалерея
+                                li.menu-item
+                                    .menu-item_link
+                                        a(href="#") Лицензии
+                                li.menu-item
+                                    .menu-item_link
+                                        a(href="#") Наши выпуски
+                                li.menu-item
+                                    .menu-item_link
+                                        a(href="#") Статьи
+                                li.menu-item
+                                    .menu-item_link
+                                        a(href="#") Новости
+                                li.menu-item
+                                    .menu-item_link
+                                        a(href="#") FAQ
+                                li.menu-item
+                                    .menu-item_link
+                                        a(href="#") Вакансии
+
                         .navbar__item(class= page_doctors ? 'active' : false)
                             a.navbar__link(href="#") Врачи
                         .navbar__item(class= page_reviews ? 'active' : false)

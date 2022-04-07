@@ -182,6 +182,7 @@ button.button-style.button-style--blue {
         margin: 0;
         padding: 0;
         position: initial;
+        display: block;
         width: auto;
     }
 }
@@ -198,12 +199,18 @@ button.button-style.button-style--blue {
 
 .navbar__menu {
     position: relative;
+    width: 100%;
+
+    @include breakpoint(lg) {
+        width: auto;
+    }
 }
 
 .navbar__submenu {
+    margin: 15px 0 0;
     padding-left: 15px;
     display: none;
-    z-index: 1;
+    z-index: 10;
 
     @include breakpoint(lg) {
         padding: 50px 55px 20px;
@@ -236,13 +243,13 @@ button.button-style.button-style--blue {
     }
 }
 
-.menu-item_title {
+.menu-item_link {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.menu-item_link {
+.menu-item_link a {
     position: relative;
     line-height: 28px;
 }
@@ -292,19 +299,24 @@ button.button-style.button-style--blue {
 }
 
 .navbar__item {
-    padding: 15px 40px;
+    margin: 15px 0;
+    padding: 0 20px;
+    width: 100%;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
 
     @include breakpoint(lg) {
+        margin: 0;
         padding: 15px 10px;
         margin-right: 51px;
+        width: auto;
     }
 
     @include breakpoint(xl) {
-        margin-right: 71px;
+        margin-right: 20px;
+        padding: 15px 35px;
         font-size: 16px;
     }
 }
@@ -313,18 +325,6 @@ button.button-style.button-style--blue {
 
     @include breakpoint(lg) {
         border-top: 3px solid $blue;
-    }
-}
-
-.navbar__item-submenu {
-    padding-bottom: 0;
-
-    @include breakpoint(lg) {
-        padding-left: 16px;
-        padding-right: 34px;
-        padding-bottom: 15px;
-        cursor: pointer;
-        transition: all 0.5s ease;
     }
 }
 
@@ -343,7 +343,14 @@ button.button-style.button-style--blue {
     }
 }
 
-.navbar__item-submenu::before {
+.navbar-burger-icon {
+
+    @include breakpoint(lg) {
+        padding-left: 15px;
+    }
+}
+
+.navbar-burger-icon::before {
 
     @include breakpoint(lg) {
         content: '\f0c9';
@@ -355,33 +362,29 @@ button.button-style.button-style--blue {
     }
 }
 
-.nav__item-menu {
-    margin: 0 0 15px;
+.navbar-burger-icon a {
     position: relative;
-    display: block;
-    min-width: 248px;
+    display: inline-block;
     text-align: center;
 
     @include breakpoint(lg) {
-        margin: 0;
-        display: inline-block;
-        min-width: unset;
         text-align: unset;
     }
 }
 
-.nav__item-menu::after {
-    content: "\f078";
-    position: absolute;
-    right: 20px;
-    font-family: $icon;
+.navbar__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     @include breakpoint(lg) {
-        content: none;
+        display: inline-block;
     }
 }
 
 .header__top-mobile {
+    padding: 0 20px;
 
     @include breakpoint(sm) {
         text-align: center;
@@ -393,10 +396,11 @@ button.button-style.button-style--blue {
 }
 
 .header__top-mobile .header__buttons {
-    margin: 20px 0;
+    margin: 20px auto;
     display: flex;
     align-items: center;
     flex-direction: column;
+    max-width: 320px;
 
     @include breakpoint(sm) {
         display: none;
