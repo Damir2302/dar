@@ -1,21 +1,56 @@
 .reviews-form-wrapper {
-    padding: 48px 53px 35px;
-    background: #fff;
-    border: 1px solid #D7D7D7;
+
+    @include breakpoint(md) {
+        padding: 48px 0 35px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 48px 53px 35px;
+        background: #fff;
+        border: 1px solid #D7D7D7;
+    }
 }
 
 .reviews-form-title {
     margin: 0 0 41px;
+    text-align: center;
+
+    @include breakpoint(md) {
+        text-align: unset;
+    }
 }
 
 .reviews-form {
-    margin-left: 30px;
-    display: flex;
-    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 375px;
+
+    @include breakpoint(md) {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 30px;
+        max-width: unset;
+    }
+
+    @include breakpoint(lg) {
+        margin-left: 30px;
+        column-gap: unset;
+    }
 }
 
 .reviews-form-col {
-    width: 50%;
+
+    @include breakpoint(md) {
+        width: 50%;
+    }
+}
+
+.reviews-input-wrapper {
+    text-align: left;
+
+    @include breakpoint(md) {
+        text-align: unset;
+    }
 }
 
 .reviews-input-wrapper label {
@@ -82,12 +117,22 @@
 
 .reviews-form-col p {
     margin: 28px 0 0;
+    text-align: center;
     color: #979FA8;
+
+    @include breakpoint(md) {
+        text-align: unset;
+    }
 }
 
 .reviews-button {
-    margin: 20px 0 0;
+    margin: 20px auto 0;
     padding: 16px 22px;
+    display: block;
     height: 47px;
     max-width: 256px;
+
+    @include breakpoint(md) {
+        margin: 20px 0 0;
+    }
 }
