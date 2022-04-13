@@ -60,4 +60,78 @@ $(document).ready(function() {
 
     });
 
+    // SERVICE PAGE ASIDE MENU
+    $('.arrow-down').on('click', function() {
+      $(this).closest('.service__menu-item').toggleClass('active');
+    });
+
+    // SERVICE PAGE REVIEWS
+    if ($('.reviews__slider').length) {
+      let reviews_slider = new Swiper('.reviews__slider', {
+        direction: 'horizontal',
+        slidesPerView: 1,
+
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+
+      });
+    }
+
+    // SERVICE PAGE QUESTION
+    if ($('.service-question__slider').length) {
+      let service_question = new Swiper('.service-question__slider', {
+        direction: 'horizontal',
+        spaceBetween: 30,
+        slidesPerView: 2,
+
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+
+      });
+    }
+
+    // SERVICE PAGE SPECIALISTS
+    if ($('.service-specialistes__slider').length) {
+      let service_spec = new Swiper('.service-specialistes__slider', {
+        direction: 'horizontal',
+        spaceBetween: 26,
+        slidesPerView: 3,
+
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+
+      });
+    }
+
+    // CATEGORY REVIEWS
+    if ($('.testimonial__slider').length) {
+      let about_license = new Swiper('.testimonial__slider', {
+        direction: 'horizontal',
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 2,
+
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+
+        navigation: {
+          nextEl: '.testimonial-section .button-next',
+          prevEl: '.testimonial-section .button-prev'
+        }
+
+      });
+  }
+
 });

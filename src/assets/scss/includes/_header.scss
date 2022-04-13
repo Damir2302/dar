@@ -1,11 +1,6 @@
 .header__top {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-    @include breakpoint(lg) {
-        justify-content: unset;
-    }
 }
 
 .header__logo {
@@ -102,14 +97,8 @@
         max-width: 198px;
     }
 
-    @include breakpoint(md) {
-        margin: 0;
-        display: flex;
-        max-width: unset;
-    }
-
     @include breakpoint(lg) {
-        display: block;
+        margin: 0;
         max-width: 198px;
     }
 }
@@ -130,13 +119,7 @@ button.button-style.button-style--blue {
 }
 
 .header__buttons button {
-
-    @include breakpoint(md) {
-        margin: 0 10px;
-        padding: 5px 22px;
-        height: 60px;
-        max-width: 160px;
-    }
+    margin-left: auto;
 
     @include breakpoint(lg) {
         margin: 0;
@@ -213,6 +196,7 @@ button.button-style.button-style--blue {
     z-index: 10;
 
     @include breakpoint(lg) {
+        margin: 0;
         padding: 50px 55px 20px;
         background: #F6F6F6;
         position: absolute;

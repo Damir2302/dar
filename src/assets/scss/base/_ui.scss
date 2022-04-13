@@ -67,6 +67,10 @@ select {
     width: 100%;
     max-width: 1186px;
     box-sizing: border-box;
+
+    @include breakpoint(md) {
+        padding: 0 30px;
+    }
 }
 
 .button-style {
@@ -136,6 +140,10 @@ h2 {
     }
 }
 
+.gradient-sec {
+    background: linear-gradient(180deg, rgba(215, 215, 215, 0.2) 0%, rgba(246, 246, 246, 0) 100%);
+}
+
 /////////////
 /// SWIPER
 /////////////
@@ -175,4 +183,5 @@ h2 {
     font-size: 24px;
     line-height: 24px;
     color: #05256F;
+    cursor: pointer;
 }

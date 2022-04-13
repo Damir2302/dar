@@ -21,8 +21,12 @@
 }
 
 .doc-schedule__table td {
-    padding: 13px 29px;
+    padding: 13px 25px;
     height: 47px;
+
+    @include breakpoint(xl) {
+        padding: 13px 29px;
+    }
 }
 
 .doc-schedule__table tbody tr:nth-child(even) td {
@@ -46,41 +50,69 @@
 }
 
 .doctors-section {
-    padding: 90px 0 120px;
+    padding: 50px 0 60px;
+
+    @include breakpoint(xl) {
+        padding: 90px 0 120px;
+    }
 }
 
 .docs__wrapper {
-    display: flex;
-    column-gap: 30px;
+
+    @include breakpoint(xl) {
+        display: flex;
+        column-gap: 30px;
+    }
 }
 
 .docs__left {
-    width: 100%;
-    max-width: 362px;
+
+    @include breakpoint(xl) {
+        width: 100%;
+        max-width: 362px;
+    }
 }
 
 .docs__anonymous {
-    padding: 35px 20px 30px;
-    background: linear-gradient(180deg, rgba(2, 3, 7, 0) 40.28%, #02060F 79.42%), url('../images/anonymous.jpg'), #05256F;
-    text-align: center;
+    padding: 35px 60px 60px;
+    background: linear-gradient(90deg, rgba(2,3,7,0.2) 10.28%, #000000 33.42%),url(../images/anonymous.jpg) no-repeat,#000;
+    background-size: contain;
+    text-align: right;
+
+    @include breakpoint(xl) {
+        padding: 35px 20px 30px;
+        background: linear-gradient(180deg, rgba(2, 3, 7, 0) 40.28%, #02060F 79.42%), url('../images/anonymous.jpg'), #05256F;
+        text-align: center;
+    }
 }
 
 .docs__anonymous-title {
-    margin: 0 auto;
-    max-width: 214px;
+    margin: 70px 0 30px;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 29px;
-    text-align: center;
+    text-align: right;
     color: $orange;
+
+    @include breakpoint(xl) {
+        margin: 0 auto;
+        max-width: 214px;
+        font-size: 24px;
+        text-align: center;
+    }
 }
 
 .docs__anonymous-text {
-    margin: 209px 0 0;
     font-size: 16px;
-    line-height: 24px;
-    text-align: center;
+    line-height: 40px;
+    text-align: right;
     color: #fff;
+
+    @include breakpoint(xl) {
+        margin: 209px 0 0;
+        line-height: 24px;
+        text-align: center;
+    }
 }
 
 .docs__anonymous-text a {
@@ -104,13 +136,22 @@
 }
 
 .docs__sertificates-image {
-    width: 100%;
-    max-width: 45.85%;
+    width: 20%;
+
+    @include breakpoint(xl) {
+        width: 100%;
+        max-width: 45.85%;
+    }
 }
 
 .docs__right {
-    width: 100%;
-    max-width: 66.666%;
+    margin: 50px 0 0;
+
+    @include breakpoint(xl) {
+        margin: 0;
+        width: 100%;
+        max-width: 66.666%;
+    }
 }
 
 .docs__block {
@@ -155,7 +196,10 @@
 }
 
 .docs__content {
-    padding: 44px 0 0;
+
+    @include breakpoint(xl) {
+        padding: 44px 0 0;
+    }
 }
 
 .docs__content-title {

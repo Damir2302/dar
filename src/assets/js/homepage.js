@@ -1,3 +1,4 @@
+// HERO SLIDER
 if ($('.hero__slider').length) {
     let hero_slider = new Swiper('.hero__slider', {
       direction: 'horizontal',
@@ -12,6 +13,7 @@ if ($('.hero__slider').length) {
     });
 }
 
+// HOMEPAGE SPECIALISTES SLIDER
 if ($('.specialistes__slider').length) {
   let specialistes__slider = new Swiper('.specialistes__slider', {
     direction: 'horizontal',
@@ -50,6 +52,7 @@ if ($('.specialistes__slider').length) {
   });
 }
 
+// HOMEPAGE OTHER-S
 if ($('.other-s').length && $(window).width() < 991) {
   let other_s = new Swiper('.other-s', {
     direction: 'horizontal',
@@ -71,6 +74,7 @@ if ($('.other-s').length && $(window).width() < 991) {
   });
 }
 
+// HOMEPAGE GALLERY SLIDER
 if ($('.gallery__slider').length) {
   let gallery__slider = new Swiper('.gallery__slider', {
     direction: 'horizontal',
@@ -104,6 +108,7 @@ if ($('.gallery__slider').length) {
   });
 }
 
+// HOMEPAGE LICENSE SLIDER
 if ($('.license__slider').length) {
   let license__slider = new Swiper('.license__slider', {
     direction: 'horizontal',
@@ -137,12 +142,13 @@ if ($('.license__slider').length) {
   });
 }
 
+// HOMEPAGE QUESTION SLIDER
 if ($('.question__slider').length) {
   let question__slider = new Swiper('.question__slider', {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
-    
+
     breakpoints: {
 
       576: {

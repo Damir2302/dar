@@ -1,0 +1,375 @@
+---
+title: ДАР - Психотерапевтический центр
+---
+
+extends includes/_page
+
+block main
+
+    // HERO SECTION
+    section.hero-section
+
+        .service-hero(style="background: linear-gradient(270deg, #05256F 0%, rgba(5, 37, 111, 0) 13.66%), linear-gradient(90deg, #04246E 52%, rgba(4, 36, 110, 0) 66.42%), url(assets/images/service-hero.jpg) no-repeat right;")
+            include components/_breadcrumbs
+            +breadcrumbs('', 'Алкоголизм', 'Лечение женского алгоколизма')
+
+            .container
+
+                h2.hero-title Лечение женского алкоголизма
+                p.hero-subtitle Лечение женского алкоголизма начинается с признания проблемы. Если вы готовы сделать первый шаг, обратитесь в клинику . Мы предлагаем помощь опытного нарколога, психолога, психиатра и специалистов узкого профиля для преодоления зависимости.
+                                 br
+                                 br
+                                 | Каждой пациентке индивидуально назначаются лекарственные препараты и процедуры, с учетом возраста, стадии зависимости и выраженности абстинентного синдрома. Не бойтесь обращаться в клинику: лечение проводится анонимно, риск огласки полностью исключён.
+                .hero__action
+                    button#actionBtn.button-style.button-style--orange Записаться на приём
+
+    // SERVICE
+    section.service-section
+
+        .container
+
+            .service__wrapper
+
+                .service__left
+
+                    .service__menu
+
+                        ul
+                            li.service__menu-item.active
+                                .service__menu-link
+                                    a(href="#") Лечение алкоголизма
+                                    span.arrow-down
+                                ul.service__submenu
+                                    li.service__submenu-item
+                                        a.service__submenu-link(href="#")  Кодирование
+                                    li.service__submenu-item
+                                        a.service__submenu-link(href="#")  Кодирование по методу Довженко
+                                    li.service__submenu-item
+                                        a.service__submenu-link(href="#")  Анонимное лечение
+                                    li.service__submenu-item
+                                        a.service__submenu-link(href="#")  Лечение гипнозом
+                                    li.service__submenu-item
+                                        a.service__submenu-link(href="#")  Конфигуративный метод
+                                    li.service__submenu-item
+                                        a.service__submenu-link(href="#")  Лечение женского алкоголизма
+                                    li.service__submenu-item
+                                        a.service__submenu-link(href="#")  Лечение пивного алкоголизма
+                            li.service__menu-item
+                                .service__menu-link
+                                    a(href="#") Табакокурение
+                                    span.arrow-down
+                            li.service__menu-item
+                                .service__menu-link
+                                    a(href="#") Избыточный вес
+                                    span.arrow-down
+                            li.service__menu-item
+                                .service__menu-link
+                                    a(href="#") Игромания
+                                    span.arrow-down
+                            li.service__menu-item
+                                .service__menu-link
+                                    a(href="#") Нервозы
+                                    span.arrow-down
+                            li.service__menu-item
+                                .service__menu-link
+                                    a(href="#") Страхи и фобии
+                                    span.arrow-down
+                            li.service__menu-item
+                                .service__menu-link
+                                    a(href="#") Шопоголизм
+                                    span.arrow-down
+                            li.service__menu-item
+                                .service__menu-link
+                                    a(href="#") Стрессы
+                                    span.arrow-down
+                            li.service__menu-item
+                                .service__menu-link
+                                    a(href="#") Созависимость
+                                    span.arrow-down
+                            li.service__menu-item
+                                .service__menu-link
+                                    a(href="#") Депрессия
+                                    span.arrow-down
+                            li.service__menu-item
+                                .service__menu-link
+                                    a(href="#") Консультация психотерапевта
+                                    span.arrow-down
+                            li.service__menu-item
+                                .service__menu-link
+                                    a(href="#") Консультация нарколога
+                                    span.arrow-down
+
+                    .docs__anonymous
+                        p.docs__anonymous-title Мы гарантируем анонимность!
+                        p.docs__anonymous-text Позвоните по телефону <a href="tel:+74951860563">+7 (495) 186-05-63</a> или оставьте заявку онлайн
+                        button.anonymous-button.button-style.button-style--orange Записаться на приём
+
+                    .service__sertificates
+                        h2.service__sertificates-title Лицензии и сертификаты
+                        .service__sertificates-wrapper
+                            .service__sertificates-image
+                                img(src="assets/images/license-1.jpg", alt="img")
+                            .service__sertificates-image
+                                img(src="assets/images/license-2.jpg", alt="img")
+                            .service__sertificates-image
+                                img(src="assets/images/license-3.jpg", alt="img")
+                            .service__sertificates-image
+                                img(src="assets/images/license-4.jpg", alt="img")
+
+                    .service__reviews
+                        h2.service__reviews-title Отзывы о нашей работе
+                        p.service__reviews-subtitle Вот что говорят посетители нашего центра и их родные
+
+                        .swiper.reviews__slider
+
+                            .swiper-wrapper
+
+                                .swiper-slide.service__reviews-block
+                                    .service__reviews-slide
+                                        p.service__reviews-name Макарин Павел Иванович
+                                        ul.service__reviews-list
+                                            li Москва
+                                            li 55 лет
+                                            li Запойный алкоголизм
+                                        p.service__reviews-text-title Текст отзыва:
+                                        p.service__reviews-text Проходил лечение от алкоголизма в этой клинике. Понял, что все плохо, только когда жена с детьми ушла и с работы выгнали. Долго собирался, но обратился за помощью. Лечение не быстрое, мне понадобилось 3 месяца, чтобы избавиться от зависимости. Но оно того стоит – и времени, и денег. Персонал и врачи в клинике очень вежливые и тактичные, всегда поддерживают.....
+
+                                .swiper-slide.service__reviews-block
+                                    .service__reviews-slide
+                                        p.service__reviews-name Макарин Павел Иванович
+                                        ul.service__reviews-list
+                                            li Москва
+                                            li 55 лет
+                                            li Запойный алкоголизм
+                                        p.service__reviews-text-title Текст отзыва:
+                                        p.service__reviews-text Проходил лечение от алкоголизма в этой клинике. Понял, что все плохо, только когда жена с детьми ушла и с работы выгнали. Долго собирался, но обратился за помощью. Лечение не быстрое, мне понадобилось 3 месяца, чтобы избавиться от зависимости. Но оно того стоит – и времени, и денег. Персонал и врачи в клинике очень вежливые и тактичные, всегда поддерживают.....
+
+                                .swiper-slide.service__reviews-block
+                                    .service__reviews-slide
+                                        p.service__reviews-name Макарин Павел Иванович
+                                        ul.service__reviews-list
+                                            li Москва
+                                            li 55 лет
+                                            li Запойный алкоголизм
+                                        p.service__reviews-text-title Текст отзыва:
+                                        p.service__reviews-text Проходил лечение от алкоголизма в этой клинике. Понял, что все плохо, только когда жена с детьми ушла и с работы выгнали. Долго собирался, но обратился за помощью. Лечение не быстрое, мне понадобилось 3 месяца, чтобы избавиться от зависимости. Но оно того стоит – и времени, и денег. Персонал и врачи в клинике очень вежливые и тактичные, всегда поддерживают.....
+
+                                .swiper-slide.service__reviews-block
+                                    .service__reviews-slide
+                                        p.service__reviews-name Макарин Павел Иванович
+                                        ul.service__reviews-list
+                                            li Москва
+                                            li 55 лет
+                                            li Запойный алкоголизм
+                                        p.service__reviews-text-title Текст отзыва:
+                                        p.service__reviews-text Проходил лечение от алкоголизма в этой клинике. Понял, что все плохо, только когда жена с детьми ушла и с работы выгнали. Долго собирался, но обратился за помощью. Лечение не быстрое, мне понадобилось 3 месяца, чтобы избавиться от зависимости. Но оно того стоит – и времени, и денег. Персонал и врачи в клинике очень вежливые и тактичные, всегда поддерживают.....
+
+                                .swiper-slide.service__reviews-block
+                                    .service__reviews-slide
+                                        p.service__reviews-name Макарин Павел Иванович
+                                        ul.service__reviews-list
+                                            li Москва
+                                            li 55 лет
+                                            li Запойный алкоголизм
+                                        p.service__reviews-text-title Текст отзыва:
+                                        p.service__reviews-text Проходил лечение от алкоголизма в этой клинике. Понял, что все плохо, только когда жена с детьми ушла и с работы выгнали. Долго собирался, но обратился за помощью. Лечение не быстрое, мне понадобилось 3 месяца, чтобы избавиться от зависимости. Но оно того стоит – и времени, и денег. Персонал и врачи в клинике очень вежливые и тактичные, всегда поддерживают.....
+
+                            .swiper-pagination.swiper-dots
+
+                .service__right
+
+                    .service__container
+
+                        h2.service-title Алгольная зависимость
+                        p.content-text Алкоголизм – патологическая зависимость от спиртных напитков, которая может развиться у представителей обоих полов. В официальной медицинской практике не принято разделять алкоголизм на женский и мужской, ведь тяга к употреблению одинаково губительна и для сильной половины человечества, и для дам.
+                          br
+                          br
+                          |Длительное употребление алкоголя приводит к тому, что этанол встраивается в биохимические процессы. В результате развивается физическая зависимость, далее – психологическая. У мужчин более устойчивая психика, поэтому процесс формирования зависимости может растягиваться на годы. Женщины же более склонны к различным психическим расстройствам, поэтому развитие алкоголизма и его лечение имеет свои особенности.
+                          br
+                          br
+                          |Лечение женского алкоголизма – одно из направлений деятельности специалистов клиники ДАР. Мы готовы помочь справиться с пагубным пристрастием и навсегда избавиться от тяги к алкогольным напиткам.
+
+                        table.price__table
+
+                            thead
+                                tr
+                                    th Наименование услуги
+                                    th Цена
+
+                            tbody
+
+                                tr
+                                    td Лечение алкогольной зависимости по методу Довженко
+                                       br
+                                       | Первичный прием – 3 000 руб.
+                                       br
+                                       | Лечебный сеанс – 10 000 руб.
+                                    td 13 000 ₽
+
+                                tr
+                                    td Продление срока кодирования по методу Довженко
+                                    td 9 000 ₽
+
+                                tr
+                                    td Индивидуальный сеанс лечения по методу Довженко
+                                    td 35 000 ₽
+
+                                tr
+                                    td Конфигуративный метод лечения алкоголизма
+                                    td 35 000 ₽
+
+                                tr
+                                    td Предварительное снятие патологической тяги к алкоголю
+                                    td 7 000 ₽
+
+                        h2.service-title Особенности женского алкоголизма
+                        p.content-text.service-content-text Женский алкоголизм является серьёзной проблемой в современном мире. Согласно статистике, на 100 зависимых мужчин приходится около 40 женщин-алкоголиков. В общественном сознании сформировано резко негативное отношение к пьющим женщинам: их осуждают, винят в развале семей и неудачах детей. Боязнь осуждения со стороны окружающих вынуждает скрывать проблему и пить в одиночку. В результате происходит разрыв связи с близкими и друзьями, но проблема женской алкогольной зависимости никуда не исчезает. Наоборот, без лечения болезнь становится хронической.
+
+                        h2.service-title Можно выделить следующие особенности женского алкоголизма:
+                        ul.service-content-list
+                            li быстрое развитие толерантности к спиртному: ферменты печени, отвечающие за расщепление веществ, работают менее активно, чем у мужчин, поэтому опьянение наступает даже после употребления небольших доз алкогольных напитков, а привыкание развивается быстрее;
+
+                            li нестабильность гормонального фона, от которого зависит настроение, самочувствие, эмоциональные реакции: раздражительность может быстро поменяться на апатию, активность – на угнетённость, спокойствие – на чрезмерное возбуждение, и женщина начинает воспринимать алкоголь как средство нормализации психического состояния;
+
+                            li стрессы и социальные факторы: женщина вынуждена работать, заниматься бытом и воспитанием детей, поэтому она часто пребывает в стрессовом состоянии;
+
+                            li скрытое течение патологии: мужчины предпочитают пить в компании, а вот женщины вынуждены скрывать наличие зависимости и употреблять алкогольные напитки в одиночестве, поэтому контроль над количеством выпитого утрачивается быстрее.
+                        p.content-text.service-content-text Есть мнение, что способов лечения хронического алкоголизма у женщин не существует. На самом деле это не так. Есть достаточно эффективные методики избавления от пагубного пристрастия, а значит, нет поводов откладывать визит в клинику и начать лечение.
+
+                        h2.service-title Причины развития алкоголизма
+                        p.content-text.service-content-text Женский алкоголизм развивается под влиянием самых различных факторов или их комбинаций. Это может быть плохая наследственность и семейные традиции, желание развеять скуку и одиночество, отвлечься от бытовой неустроенности и загруженности домашними делами. Нередко для женщин толчком становятся серьёзные личные проблемы: измена мужа, развод, насилие, болезнь или потеря близкого человека. Ещё один распространённый вариант развития зависимости – употребление алкоголя за компанию с партнёром.
+
+                        h2.service-title Когда необходима помощь?
+                        p.content-text.service-content-text Пристрастие к алкогольным напиткам у мужчин в среднем формируется в течение 7-10 лет, средний период развития женского алкоголизма гораздо короче – всего лишь 5 лет. Последствия алкоголизма – нарушение работы всех жизненно важных органов. Поэтому не стоит ждать, пока спиртное нанесёт необратимый вред здоровью и психике. Алкоголика – и женщину, и мужчину – необходимо лечить, привлекая профессионалов и обращаясь в клинику.
+
+                        h2.service-title Методы лечения алкоголизма у женщин
+                        p.content-text.service-content-text Лечение женского алкоголизма – это комплекс мер по устранению причин заболевания и его последствий. Наиболее действенными для лечения зависимости считаются психотерапевтические методики. Любая женщина, столкнувшаяся с подобной проблемой, может обратиться в клинику ДАР. Опытные наркологи и психотерапевты сделают всё возможное, чтобы помочь избавиться от зависимости, обрести внутреннюю гармонию и почувствовать радость от трезвой жизни.
+                          |
+                          br
+                          br
+                          |Лечение хронического алкоголизма проводится анонимно. Записаться на консультацию и лечение можно по телефону или через форму обратной связи прямо на сайте.
+                        span.service-notify Статья написана под кураторством доктора Ечеистов В.В.
+
+                        // CONSULTATION
+                        section.consultation-section
+
+                            .consultation-wrapper
+
+                                h2.consultation-title Запишитесь на бесплатную консультацию по телефону
+                                p.consultation-subtitle По телефону врач соберет первичный анамнез, сформирует бригаду, сообщит о точной стоимости процедуры и времени прибытия нарколога.
+
+                                form.consultation-form
+
+                                    .cons-form-row
+
+                                        .cons-input-wrapper
+                                            label Ваше имя
+                                            .cons-input.cons-input-name
+                                                input.input-style(type="text" name="name" placeholder="Представьтесь, как вас зовут?")
+
+                                        .cons-input-wrapper
+                                            label Ваш телефон
+                                            .cons-input.cons-input-phone
+                                                input.input-style(type="text" name="phone" placeholder="+7")
+
+                                    .cons-form-row
+
+                                        p.cons-agreement Отправляя заявку, вы соглашаетесь на обработку <a href="#">персональных данных</a> и с условиями <a href="#">политики конфиденциальности</a>
+
+                                        button.cons-button.button-style.button-style--orange(type="submit") Отправить данные
+
+                        // QUESTION
+                        section.question-section.service-question
+
+                            .container
+
+                                h2.section-title.service-question__title Ответы на часто задаваемые вопросы
+                                p.service-question__subtitle Наши специалисты ответят на любой вопрос на бесплатной консультации
+
+                                .swiper.service-question__slider
+
+                                    .swiper-wrapper
+
+                                        .swiper-slide.question__block
+                                            span.question-icon
+                                                i.fal.fa-question
+                                            p.question__question Какой метод терапии самый эффективный?
+                                            p.question__answer Перед выбором антиалкогольной терапии нарколог работает с пациентом, проводит обследование для выявления противопоказаний. Алкозависимому предлагается медикаментозная или психологическая кодировка. ...
+                                            a.question__link(href="#") >>
+
+                                        .swiper-slide.question__block
+                                            span.question-icon
+                                                i.fal.fa-question
+                                            p.question__question Как проходит лечение алкоголизма?
+                                            p.question__answer Алкогольную зависимость лечат в три этапа. Сначала нужно пройти процедуру детоксикации капельницами. После выведения из организма продуктов распада этилового спирта проводится медикаментозная кодировка...
+                                            a.question__link(href="#") >>
+
+                                        .swiper-slide.question__block
+                                            span.question-icon
+                                                i.fal.fa-question
+                                            p.question__question Жена сказала, что уйдет, если не брошу пить. Сам я бросить не могу, пробовал неоднократно. Сможете ли вы сделать так, чтобы я больше не пил?
+                                            p.question__answer Излечение от алкогольной зависимости в большей степени зависит от Вас и Вашего желания действительно прекратить принимать спиртное. Если Вы понимаете понимаете понимаете понимаете.
+                                            a.question__link(href="#") >>
+
+                                        .swiper-slide.question__block
+                                            span.question-icon
+                                                i.fal.fa-question
+                                            p.question__question Мой сын принимает героин. Пробовала говорить с ним – любые попытки завести речь о лечении встречает в штыки. Что делать? Можно ли у вас лечить его принудительно?
+                                            p.question__answer Принудительное лечение – крайняя мера, пойти на которую можно лишь в нескольких случаях, предусмотренных законом. Например, если наркоман представляет...
+                                            a.question__link(href="#") >>
+
+                                        .swiper-slide.question__block
+                                            span.question-icon
+                                                i.fal.fa-question
+                                            p.question__question Увидел у вас на сайте, что вы практикуете программу «12 шагов». Что это такое? Слышал,  это связано с религией – это так?
+                                            p.question__answer «12 шагов» — последовательная программа духовного восстановления, в которой сами наркоманы или алкоголики помогают друг другу исцелиться от болезни.
+                                            a.question__link(href="#") >>
+
+                                    .swiper-pagination.swiper-dots
+
+                        // SPECIALISTES
+                        section.specialistes-section
+
+                            .container
+
+                                h2.section-title.specialistes-title Наши специалисты
+
+                                .swiper.service-specialistes__slider
+
+                                    .swiper-wrapper
+
+                                        .swiper-slide.specialistes__block
+                                            .specialistes__image
+                                                img(src="assets/images/spec-1.jpg", alt="img")
+                                            p.specialistes__title Гонтовой Александр Александрович
+                                            span.specialistes__subtitle Психиатр-нарколог, психотерапевт. Ученик А. Р. Довженко.
+
+                                        .swiper-slide.specialistes__block
+                                            .specialistes__image
+                                                img(src="assets/images/spec-2.jpg", alt="img")
+                                            p.specialistes__title Кропотова Татьяна Сергеевна
+                                            span.specialistes__subtitle 2006 г. окончила Самарский государственный медицинский университет по специальности «Лечебное дело». <br><br>Первичный прием и лечение пациентов с алкогольной зависимостью
+
+                                        .swiper-slide.specialistes__block
+                                            .specialistes__image
+                                                img(src="assets/images/spec-3.jpg", alt="img")
+                                            p.specialistes__title Баласанов Рафаэль Владимирович
+                                            span.specialistes__subtitle Баласанов Р. В. Психиатр-нарколог, психолог-психотерапевт. Врач высшей категории. Ведущий специалист в области лечения алкогольной и никотиновой зависимостей, коррекции веса.
+
+                                        .swiper-slide.specialistes__block
+                                            .specialistes__image
+                                                img(src="assets/images/spec-4.jpg", alt="img")
+                                            p.specialistes__title Прилепский Дмитрий Вадимович
+                                            span.specialistes__subtitle Прилепский Д. В. Психиатр-нарколог.В 1992 году окончил Горьковский медицинский институт. <br><br>В «Психотерапевтическом центре «ДАР» работает с 1995 года.
+
+                                        .swiper-slide.specialistes__block
+                                            .specialistes__image
+                                                img(src="assets/images/spec-4.jpg", alt="img")
+                                            p.specialistes__title Прилепский Дмитрий Вадимович
+                                            span.specialistes__subtitle Прилепский Д. В. Психиатр-нарколог.В 1992 году окончил Горьковский медицинский институт. <br><br>В «Психотерапевтическом центре «ДАР» работает с 1995 года.
+
+                                    .swiper-pagination.swiper-dots
+
+    // CONSULTATION
+    section.consultation-section.invert-section
+        include components/_consultation-blue

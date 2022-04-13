@@ -10,7 +10,6 @@ $lightOrange: #F5D37E;
 @import 'base/ui';
 
 @import 'plugins/swiper-bundle';
-@import 'plugins/jquery-ui.min';
 
 @import 'includes/header';
 @import 'includes/footer';
@@ -26,3 +25,6 @@ $lightOrange: #F5D37E;
 @import 'pages/about';
 @import 'pages/contacts';
 @import 'pages/price';
+@import 'pages/service';
+@import 'pages/category';
+@import 'pages/articles';
