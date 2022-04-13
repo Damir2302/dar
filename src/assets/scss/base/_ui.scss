@@ -74,7 +74,7 @@ select {
 }
 
 .button-style {
-    padding: 11px 32px;
+    padding: 11px 25px;
     width: 100%;
     height: 40px;
     font-size: 12px;
@@ -82,6 +82,10 @@ select {
     border-radius: 44px;
     transition: all 0.5s ease;
     box-sizing: border-box;
+
+    @include breakpoint(lg) {
+        padding: 11px 32px;
+    }
 }
 
 a.button-style {
@@ -117,16 +121,25 @@ a.button-style {
 
 h1 {
     font-weight: 500;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 44px;
     color: #fff;
+
+    @include breakpoint(md) {
+        font-size: 36px;
+    }
 }
 
 h2 {
     font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 18px;
+    line-height: 24px;
     color: #000;
+
+    @include breakpoint(md) {
+        font-size: 24px;
+        line-height: 29px;
+    }
 }
 
 .section-title {

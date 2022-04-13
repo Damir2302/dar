@@ -8,14 +8,23 @@
 
 .reviews__tab-list {
     display: flex;
+    justify-content: space-between;
     border-bottom: 1px solid #DEF2FD;
+
+    @include breakpoint(xl) {
+        justify-content: unset;
+    }
 }
 
 .reviews__tab-link {
-    margin-right: 32px;
-    padding: 8px 8px 24px;
+    padding: 8px 5px 24px;
     font-weight: 500;
     color: #979FA8;
+
+    @include breakpoint(xl) {
+        margin-right: 28px;
+        padding: 8px 8px 24px;
+    }
 }
 
 .reviews__tab-link.active {

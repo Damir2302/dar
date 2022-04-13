@@ -1,21 +1,47 @@
 .doc-inner-section {
-    padding: 66px 0;
+    padding: 30px 0;
+
+    @include breakpoint(md) {
+        padding: 66px 0;
+    }
 }
 
 .doc-inner__wrapper {
-    display: flex;
-    column-gap: 28px;
+
+    @include breakpoint(lg) {
+        display: flex;
+        column-gap: 28px;
+    }
 }
 
 .doc-left-col {
+    margin: 0 auto 30px;
     width: 100%;
     max-width: 360px;
     text-align: center;
+
+    @include breakpoint(md) {
+        margin: 0 25px 50px 0;
+        float: left;
+    }
+
+    @include breakpoint(lg) {
+        margin: 0;
+        width: 100%;
+        max-width: 360px;
+        text-align: center;
+        float: unset;
+    }
 }
 
 .doc-inner-img {
-    width: 360px;
-    height: 415px;
+    max-width: 360px;
+    max-width: 415px;
+
+    @include breakpoint(md) {
+        width: 360px;
+        height: 415px;
+    }
 }
 
 .doc-inner-img img {
@@ -41,6 +67,14 @@
 
 .doc-inner-info h2 {
     margin: 50px 0 20px;
+
+    @include breakpoint(md) {
+        clear: both;
+    }
+
+    @include breakpoint(lg) {
+        clear: unset;
+    }
 }
 
 .doc-inner-info ul {
@@ -77,15 +111,20 @@
 .doc-inner-list li {
     margin-left: 31px;
     position: relative;
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 14px;
+    line-height: 26px;
     color: $blue;
+
+    @include breakpoint(md) {
+        font-size: 16px;
+        line-height: 32px;
+    }
 }
 
 .doc-inner-list li::before {
     content: '';
     position: absolute;
-    top: 10px;
+    top: 12px;
     left: -32px;
     width: 11px;
     height: 11px;

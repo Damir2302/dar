@@ -97,8 +97,8 @@
         max-width: 198px;
     }
 
-    @include breakpoint(lg) {
-        margin: 0;
+    @include breakpoint(md) {
+        margin: 0 0 0 auto;
         max-width: 198px;
     }
 }
@@ -121,9 +121,11 @@ button.button-style.button-style--blue {
 .header__buttons button {
     margin-left: auto;
 
+    @include breakpoint(md) {
+        margin: 0 0 10px;
+    }
+
     @include breakpoint(lg) {
-        margin: 0;
-        padding: 11px 32px;
         height: 40px;
         max-width: 198px;
     }
@@ -293,8 +295,8 @@ button.button-style.button-style--blue {
 
     @include breakpoint(lg) {
         margin: 0;
+        margin-right: 45px;
         padding: 15px 10px;
-        margin-right: 51px;
         width: auto;
     }
 

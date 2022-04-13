@@ -1,13 +1,26 @@
 .invert-section {
     background-image: url('../images/callback-bg.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
+
+    @include breakpoint(md) {
+        background-size: unset;
+    }
 }
 
 .consultation-wrapper {
-    padding: 54px 68px 14px;
+    padding: 30px 20px 14px;
     background-color: #fff;
     border: 1px solid #D7D7D7;
     box-sizing: border-box;
+
+    @include breakpoint(md) {
+        padding: 40px 38px 14px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 54px 68px 14px;
+    }
 }
 
 .consultation-form ::placeholder {
@@ -19,11 +32,12 @@
 }
 
 .consultation-wrapper.invert-block {
-    padding: 135px 0 70px;
-}
-
-.consultation-wrapper.invert-block {
+    padding: 50px 0 20px;
     border: none;
+
+    @include breakpoint(lg) {
+        padding: 135px 0 70px;
+    }
 }
 
 .consultation-title.invert-block {
@@ -34,9 +48,13 @@
 }
 
 .consultation-subtitle {
-    margin: 40px 0 25px;
+    margin: 20px 0;
     max-width: 716px;
     color: #979FA8;
+
+    @include breakpoint(md) {
+        margin: 40px 0 25px;
+    }
 }
 
 .consultation-subtitle.invert-block {
@@ -45,25 +63,47 @@
 
 .cons-form-row {
     margin: 0 0 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 30px;
+    max-width: 375px;
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        column-gap: 30px;
+        max-width: unset;
+    }
 }
 
 .cons-input-wrapper {
+    margin: 0 0 30px;
     width: 100%;
+
+    @include breakpoint(md) {
+        margin: 0;
+    }
 }
 
 .cons-input {
+    margin: 5px 0 0;
+    position: relative;
     width: 100%;
+
+    @include breakpoint(md) {
+        margin: 15px 0 0;
+    }
 }
 
 .cons-agreement {
+    margin: 0 0 30px;
     width: 100%;
     font-size: 12px;
     line-height: 15px;
     color: #000;
+
+    @include breakpoint(md) {
+        margin: 0;
+    }
 }
 
 .cons-agreement a {
@@ -107,14 +147,8 @@
 .cons-input-wrapper label.invert-block {
     color: $orange;
 }
-
-.cons-input {
-    margin: 15px 0 0;
-    position: relative;
-}
-
 .cons-input input {
-    padding: 13px 25px;
+    padding: 13px 40px 13px 25px;
     height: 47px;
 }
 
