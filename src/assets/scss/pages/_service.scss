@@ -1,10 +1,40 @@
 .service-hero {
-    padding: 70px 0 45px;
+    padding: 60px 0;
+    position: relative;
+    
+    @include breakpoint(xl) {
+        padding: 70px 0 45px;
+    }
+
+    @include breakpointMax(md) {
+        background: linear-gradient(270deg, #05256F 0%, rgba(5,37,111,0) 13.66%),linear-gradient(90deg, #04246E 44%, rgba(4,36,110,0.5) 100%)!important;
+    }
+}
+
+.service-hero::before {
+
+    @include breakpoint(md) {
+        content: '';
+        background: linear-gradient(270deg, #05256F 0%, rgba(5,37,111,0) 16.66%),linear-gradient(90deg, #04246E 53%, rgba(4,36,110,0) 98.42%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    @include breakpoint(lg) {
+        content: none;
+    }
 }
 
 .service-hero .breadcrumbs {
-    padding: 0 0 46px;
-    background: none;
+    display: none;
+
+    @include breakpoint(md) {
+        padding: 0 0 46px;
+        background: none;
+    }
 }
 
 .service-hero .breadcrumbs a {
@@ -13,9 +43,14 @@
 
 .hero-title {
     font-weight: 500;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 24px;
+    line-height: 32px;
     color: #fff;
+
+    @include breakpoint(md) {
+        font-size: 36px;
+        line-height: 44px;
+    }
 }
 
 .hero-subtitle {
@@ -30,14 +65,31 @@
     padding: 56px 0 110px;
 }
 
+.service-section .container {
+
+    @include breakpointMax(md) {
+        padding: 0;
+    }
+}
+
 .service__wrapper {
-    display: flex;
-    column-gap: 30px;
+
+    @include breakpoint(lg) {
+        display: flex;
+        column-gap: 30px;
+    }
 }
 
 .service__left {
-    width: 100%;
-    max-width: 362px;
+
+    @include breakpoint(lg) {
+        width: 100%;
+        max-width: 275px;
+    }
+
+    @include breakpoint(xl) {
+        max-width: 362px;
+    }
 }
 
 .service__menu {
@@ -79,11 +131,15 @@
 
 .service__submenu {
     margin: 12px 0 24px;
-    margin-left: 50px;
+    margin-left: 15px;
     display: none;
+
+    @include breakpoint(xl) {
+        margin-left: 50px;
+    }
 }
 
-.service__menu-item.active .service__submenu {
+.service__menu-item:first-child .service__submenu {
     display: block;
 }
 
@@ -99,24 +155,50 @@
     margin: 40px 0 0;
 }
 
+.service__sertificates {
+    padding: 0 20px;
+
+    @include breakpoint(md) {
+        padding: 0;
+    }
+}
+
 .service__sertificates-title {
-    margin: 52px 0 28px;
+    margin: 30px 0 28px;
+
+    @include breakpoint(md) {
+        margin: 52px 0 28px;
+    }
 }
 
 .service__sertificates-wrapper {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 30px;
+    column-gap: 15px;
     row-gap: 18px;
+
+    @include breakpoint(md) {
+        column-gap: 30px;
+    }
 }
 
 .service__sertificates-image {
-    width: 100%;
-    max-width: 45.5%;
+    width: 20%;
+
+    @include breakpoint(xl) {
+        width: 100%;
+        max-width: 45.85%;
+    }
 }
 
 .service__reviews {
-    margin: 80px 0 0;
+    margin: 50px 0 0;
+    padding: 0 20px;
+
+    @include breakpoint(md) {
+        margin: 80px 0 0;
+        padding: 0;
+    }
 }
 
 .service__reviews-subtitle {
@@ -134,9 +216,12 @@
 }
 
 .service__reviews-slide {
-    padding: 48px;
-    border: 1px solid #D7D7D7;
     box-sizing: border-box;
+
+    @include breakpoint(md) {
+        padding: 48px;
+        border: 1px solid #D7D7D7;
+    }
 }
 
 .service__reviews-name {
@@ -200,12 +285,35 @@
 }
 
 .service__right {
-    width: 100%;
-    max-width: 66.666%;
+
+    @include breakpoint(lg) {
+        width: 100%;
+        max-width: 66.666%;
+    }
+}
+
+.service__right h2 {
+    padding: 0 20px;
+
+    @include breakpoint(md) {
+        padding: 0;
+    }
+}
+
+.service__right p {
+    padding: 0 20px;
+
+    @include breakpoint(md) {
+        padding: 0;
+    }
 }
 
 .service-title {
-    margin: 0 0 40px;
+    margin: 40px 0;
+
+    @include breakpoint(lg) {
+        margin: 0 0 40px;
+    }
 }
 
 .service-content-text {
@@ -214,15 +322,25 @@
 
 .service-content-list {
     margin: 0 0 50px;
+    padding: 0 20px;
+
+    @include breakpoint(md) {
+        padding: 0;
+    }
 }
 
 .service-content-list li {
     margin-left: 21px;
     margin-bottom: 30px;
     position: relative;
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 14px;
+    line-height: 26px;
     color: #222222;
+
+    @include breakpoint(md) {
+        font-size: 16px;
+        line-height: 32px;
+    }
 }
 
 .service-content-list li::before {
@@ -244,6 +362,13 @@
     margin: 60px 0 70px;
 }
 
+.service-section .price__table td {
+
+    @include breakpointMax(md) {
+        padding: 13px 21px;
+    }
+}
+
 .service-price td:nth-child(odd) {
     color: #222222;
 }
@@ -260,20 +385,53 @@
 }
 
 .service-notify {
+    padding: 0 20px;
     display: block;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
     color: #04246E;
     text-align: right;
+
+    @include breakpoint(md) {
+        padding: 0;
+    }
 }
 
 .service__container .consultation-section {
-    margin: 95px 0 0;
+    margin: 45px 0 0;
+
+    @include breakpoint(md) {
+        margin: 95px 0 0;
+    }
 }
 
 .service__container .consultation-wrapper {
-    padding: 52px 48px 10px;
+    
+    @include breakpoint(xl) {
+        padding: 52px 48px 10px;
+    }
+}
+
+.service__container .consultation-title {
+    
+    @include breakpointMax(md) {
+        padding: 0;
+    }
+}
+
+.service__container .consultation-subtitle {
+    
+    @include breakpointMax(md) {
+        padding: 0;
+    }
+}
+
+.service__container .cons-agreement{
+    
+    @include breakpointMax(md) {
+        padding: 0;
+    }
 }
 
 .service__container input {
@@ -285,7 +443,10 @@
 }
 
 .service-question {
-    margin: 74px 0 0;
+
+    @include breakpoint(md) {
+        margin: 74px 0 0;
+    }
 }
 
 .service-question__title {
@@ -299,10 +460,18 @@
 
 .service-question__slider .question__block {
     padding: 70px 20px 45px;
+
+    @include breakpointMax(md) {
+        border: none;
+    }
 }
 
 .service-specialistes__slider {
-    padding: 0 0 50px;
+    padding: 0 20px 50px;
+
+    @include breakpoint(md) {
+        padding: 0 0 50px;
+    }
 }
 
 .service-specialistes__slider .swiper-pagination.swiper-dots {

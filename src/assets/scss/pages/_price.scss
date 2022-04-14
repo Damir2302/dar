@@ -1,10 +1,32 @@
 .price-section {
-    padding: 60px 0 70px;
+    padding: 30px 0 70px;
+
+    @include breakpoint(md) {
+        padding: 60px 0 70px;
+    }
+}
+
+.price-section .container {
+
+    @include breakpointMax(md) {
+        padding: 0;
+    }
+}
+
+.price-section h2 {
+
+    @include breakpointMax(md) {
+        padding: 0 20px;
+    }
 }
 
 .price__subtext {
     margin: 40px 0 35px;
     color: #979FA8;
+
+    @include breakpointMax(md) {
+        padding: 0 20px;
+    }
 }
 
 .price-list__title {
@@ -13,10 +35,18 @@
     font-size: 18px;
     line-height: 22px;
     color: #000000;
+
+    @include breakpointMax(md) {
+        padding: 0 20px;
+    }
 }
 
 .price-list {
     margin: 0 0 40px;
+
+    @include breakpointMax(md) {
+        padding: 0 20px;
+    }
 }
 
 .price-list li {
@@ -43,6 +73,10 @@
     line-height: 22px;
     text-transform: uppercase;
     color: #000000;
+
+    @include breakpointMax(md) {
+        padding: 0 20px;
+    }
 }
 
 .price__table {
@@ -60,11 +94,18 @@
 
 .price__table td {
     padding: 13px 29px;
-    height: 47px;
+    border-top: 1px solid #F2F2F2;
+}
+
+.price__table tr:first-child td {
+    border-top: none;
 }
 
 .price__table tbody tr:nth-child(even) td {
-    background: #F2F2F2;
+
+    @include breakpoint(lg) {
+        background: #F2F2F2;
+    }
 }
 
 .price__table th:nth-child(odd) {
@@ -78,13 +119,21 @@
 
 .price__table th:nth-child(even),
 .price__table td:nth-child(even) {
-    margin-left: 30px;
-    display: inline-block;
-    width: calc(100% - 30px)
+    width: 100%;
+
+    @include breakpoint(md) {
+        margin-left: 30px;
+        display: inline-block;
+        width: calc(100% - 30px);
+    }
 }
 
 .price-list__text {
     margin: 63px 0 25px;
+
+    @include breakpointMax(md) {
+        padding: 0 20px;
+    }
 }
 
 .price__rules {
@@ -93,6 +142,10 @@
     line-height: 17px;
     color: #04246E;
     text-transform: uppercase;
+
+    @include breakpointMax(md) {
+        padding: 0 20px;
+    }
 }
 
 .price__rules::before {

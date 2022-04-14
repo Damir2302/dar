@@ -2,20 +2,16 @@
     background-image: url('../images/callback-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-
-    @include breakpoint(md) {
-        background-size: unset;
-    }
 }
 
 .consultation-wrapper {
     padding: 30px 20px 14px;
     background-color: #fff;
-    border: 1px solid #D7D7D7;
     box-sizing: border-box;
 
     @include breakpoint(md) {
         padding: 40px 38px 14px;
+        border: 1px solid #D7D7D7;
     }
 
     @include breakpoint(lg) {

@@ -63,13 +63,21 @@ $(document).ready(function() {
     // SERVICE PAGE ASIDE MENU
     $('.arrow-down').on('click', function() {
       $(this).closest('.service__menu-item').toggleClass('active');
+      $(this).closest('.service__menu-item').find('.service__submenu').slideToggle();
     });
 
     // SERVICE PAGE REVIEWS
     if ($('.reviews__slider').length) {
       let reviews_slider = new Swiper('.reviews__slider', {
         direction: 'horizontal',
+        autoplay: true,
         slidesPerView: 1,
+
+        breakpoints: {
+          768: {
+            autoplay: false
+          }
+        },
 
         pagination: {
           el: '.swiper-pagination',
@@ -84,8 +92,16 @@ $(document).ready(function() {
     if ($('.service-question__slider').length) {
       let service_question = new Swiper('.service-question__slider', {
         direction: 'horizontal',
-        spaceBetween: 30,
-        slidesPerView: 2,
+        autoplay: true,
+        slidesPerView: 1,
+
+        breakpoints: {
+          768: {
+            autoplay: false,
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+        },
 
         pagination: {
           el: '.swiper-pagination',
@@ -100,8 +116,20 @@ $(document).ready(function() {
     if ($('.service-specialistes__slider').length) {
       let service_spec = new Swiper('.service-specialistes__slider', {
         direction: 'horizontal',
-        spaceBetween: 26,
-        slidesPerView: 3,
+        spaceBetween: 20,
+        slidesPerView: 1,
+
+        breakpoints: {
+          470: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+    
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 26,
+          },
+        },
 
         pagination: {
           el: '.swiper-pagination',
