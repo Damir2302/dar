@@ -124,7 +124,7 @@ $(document).ready(function() {
             slidesPerView: 2,
             spaceBetween: 10,
           },
-    
+
           768: {
             slidesPerView: 3,
             spaceBetween: 26,
@@ -145,8 +145,17 @@ $(document).ready(function() {
       let about_license = new Swiper('.testimonial__slider', {
         direction: 'horizontal',
         loop: true,
-        spaceBetween: 30,
-        slidesPerView: 2,
+        autoplay: true,
+        spaceBetween: 20,
+        slidesPerView: 1,
+
+        breakpoints: {
+          768: {
+            autoplay: false,
+            spaceBetween: 30,
+            slidesPerView: 2,
+          }
+        },
 
         pagination: {
           el: '.swiper-pagination',
