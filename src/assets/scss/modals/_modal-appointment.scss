@@ -1,0 +1,32 @@
+#modal_appointment_send {
+    background: none;
+}
+
+#modal_appointment_send .modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,0.2);
+    outline: 0;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+#modal_appointment_send .modal-header {
+    min-height: 16.428571429px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#modal_appointment_send .modal-header p {
+    font-size: 18px;
+}
+
+#modal_appointment_send .modal-header span {
+    font-size: 14px;
+}
+
+.appointment {
+    padding: 20px;
+    display: flex;
+}

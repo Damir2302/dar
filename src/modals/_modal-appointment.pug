@@ -1,0 +1,148 @@
+#fancybox-container-1.fancybox-container.fancybox-is-open.fancybox-can-swipe(role='dialog' tabindex='-1' style='transition-duration: 366ms;')
+    .fancybox-bg
+    .fancybox-inner
+        .fancybox-infobar
+            span(data-fancybox-index='') 1
+            |  / 
+            span(data-fancybox-count='') 1
+        .fancybox-toolbar
+            button.fancybox-button.fancybox-button--zoom(data-fancybox-zoom='' title='Zoom' disabled='')
+                svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24')
+                    path(d='M18.7 17.3l-3-3a5.9 5.9 0 0 0-.6-7.6 5.9 5.9 0 0 0-8.4 0 5.9 5.9 0 0 0 0 8.4 5.9 5.9 0 0 0 7.7.7l3 3a1 1 0 0 0 1.3 0c.4-.5.4-1 0-1.5zM8.1 13.8a4 4 0 0 1 0-5.7 4 4 0 0 1 5.7 0 4 4 0 0 1 0 5.7 4 4 0 0 1-5.7 0z')
+            button.fancybox-button.fancybox-button--play(data-fancybox-play='' title='Start slideshow' style='display: none;')
+                svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24')
+                    path(d='M6.5 5.4v13.2l11-6.6z')
+                svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24')
+                    path(d='M8.33 5.75h2.2v12.5h-2.2V5.75zm5.15 0h2.2v12.5h-2.2V5.75z')
+            button.fancybox-button.fancybox-button--thumbs(data-fancybox-thumbs='' title='Thumbnails' style='display: none;')
+                svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24')
+                    path(d='M14.59 14.59h3.76v3.76h-3.76v-3.76zm-4.47 0h3.76v3.76h-3.76v-3.76zm-4.47 0h3.76v3.76H5.65v-3.76zm8.94-4.47h3.76v3.76h-3.76v-3.76zm-4.47 0h3.76v3.76h-3.76v-3.76zm-4.47 0h3.76v3.76H5.65v-3.76zm8.94-4.47h3.76v3.76h-3.76V5.65zm-4.47 0h3.76v3.76h-3.76V5.65zm-4.47 0h3.76v3.76H5.65V5.65z')
+            button.fancybox-button.fancybox-button--close(data-fancybox-close='' title='Close')
+                svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24')
+                    path(d='M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z')
+        .fancybox-navigation
+            button.fancybox-button.fancybox-button--arrow_left(data-fancybox-prev='' title='Previous' disabled='')
+                div
+                    svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24')
+                        path(d='M11.28 15.7l-1.34 1.37L5 12l4.94-5.07 1.34 1.38-2.68 2.72H19v1.94H8.6z')
+            button.fancybox-button.fancybox-button--arrow_right(data-fancybox-next='' title='Next' disabled='')
+                div
+                    svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24')
+                        path(d='M15.4 12.97l-2.68 2.72 1.34 1.38L19 12l-4.94-5.07-1.34 1.38 2.68 2.72H5v1.94z')
+        .fancybox-stage
+            .fancybox-slide.fancybox-slide--html.fancybox-slide--current.fancybox-slide--complete(style='')
+                #modal_appointment_send.modal.fade.fancybox-content(style='display: inline-block;')
+                    .modal-dialog
+                        .modal-content
+                            form#appointment_add(role='form' name='appointment_add' action='/' method='post' enctype='multipart/form-data')
+                                .modal-header
+                                    p Записаться на прием
+                                    span Заполнив данную форму, Вы можете прямо сейчас записаться на прием к врачу.
+                                input#sessid_1(type='hidden' name='sessid' value='4fe323e953ab338dd77acbcfe03b9bbe')
+                                input(type='hidden' name='PROPERTY[NAME][0]' value='Запись на прием №40211')
+                                .appointment
+                                    .appointment-col
+                                        .modal-body
+                                            .form-group
+                                                label(for='modal_zapis_send_name')
+                                                    | Имя
+                                                    span *
+                                                input#modal_zapis_send_name.form-control(type='text' name='PROPERTY[35][0]' value='' required='required' placeholder='Имя')
+                                            .form-group
+                                                label(for='modal_zapis_send_phone')
+                                                    | Телефон
+                                                    span *
+                                                input#modal_zapis_send_phone.form-control.numeric(type='text' name='PROPERTY[30][0]' value='' placeholder='Телефон' required='required')
+                                            .form-group
+                                                label(for='modal_zapis_send_call_time')
+                                                    | Какая помощь нужна
+                                                    span *
+                                                #conslutation_theme_top.input-group.pull-left
+                                                    input#modal_zapis_send_call_time.form-control(type='text' name='PROPERTY[31][0]' value='Лечение алкоголизма' placeholder='Лечение алкоголизма' required='required')
+                                                    .input-group-btn
+                                                        button.btn.btn-default.dropdown-toggle(data-toggle='dropdown' type='button')
+                                                            span.caret
+                                                        ul#conslutation_theme_top_ul.dropdown-menu.pull-right
+                                                            li
+                                                            a(data-id='1' rel='Лечение алкоголизма' href='javascript:void(0)') Лечение алкоголизма
+                                                            li
+                                                            a(data-id='2' rel='Лечение табакокурения' href='javascript:void(0)') Лечение табакокурения
+                                                            li
+                                                            a(data-id='3' rel='Коррекция веса' href='javascript:void(0)') Коррекция веса
+                                                            li
+                                                            a(data-id='4' rel='Психологическая помощь' href='javascript:void(0)') Психологическая помощь
+                                                            li
+                                                            a(data-id='5' rel='Лечение игромании' href='javascript:void(0)') Лечение игромании
+                                                            li
+                                                            a(data-id='6' rel='Лечение зависимости от курительных смесей' href='javascript:void(0)') Лечение зависимости от курительных смесей
+                                                    // /btn-group
+                                            .form-group
+                                                label(for='modal_zapis_send_call_time')
+                                                    | Врач
+                                                    span
+                                                #conslutation_theme_top.input-group.pull-left
+                                                    input#modal_zapis_send_call_time1.form-control(type='text' name='PROPERTY[29][0]' value='' placeholder='')
+                                                    .input-group-btn
+                                                        button.btn.btn-default.dropdown-toggle(data-toggle='dropdown' type='button')
+                                                            span.caret
+                                                        ul#conslutation_theme_top_ul1.dropdown-menu.pull-right
+                                                            li
+                                                            a(href='javascript:void(0)' data-id='47218' rel='Кропотова Татьяна Сергеевна') Кропотова Татьяна Сергеевна
+                                                            li
+                                                            a(href='javascript:void(0)' data-id='81' rel='Гонтовой Александр Александрович') Гонтовой Александр Александрович
+                                                            li
+                                                            a(href='javascript:void(0)' data-id='15' rel='Белянов Игорь Борисович') Белянов Игорь Борисович
+                                                            li
+                                                            a(href='javascript:void(0)' data-id='12' rel='Прилепский Дмитрий Вадимович') Прилепский Дмитрий Вадимович
+                                                            li
+                                                            a(href='javascript:void(0)' data-id='11' rel='Баласанов Рафаэль Владимирович') Баласанов Рафаэль Владимирович
+                                                        // /btn-group
+                                    .appointment-col
+                                        .modal-body
+                                            .form-group
+                                                label(for='modal_zapis_send_data_time')
+                                                    | Дата приема
+                                                    span *
+                                                input.form-control(type='text' id='PROPERTY[36][0]' name='PROPERTY[36][0]' value='' style='display: inline;width: 100px;' placeholder='дд.мм.гггг' required='required')
+                                                img.calendar-icon(src='/bitrix/js/main/core/images/calendar-icon.gif' alt='Выбрать дату в календаре' onclick="BX.calendar({node:this, field:'PROPERTY[36][0]', form: '', bTime: true, currentTime: '1650032993', bHideTime: true});" onmouseover="BX.addClass(this, 'calendar-icon-hover');" onmouseout="BX.removeClass(this, 'calendar-icon-hover');" border='0')
+                                            .form-group
+                                                label(for='modal_zapis_send_call_time')
+                                                    | Желаемое время звонка
+                                                    span *
+                                                #conslutation_theme_top.input-group.pull-left
+                                                    input#modal_zapis_send_call_time2.form-control(type='text' name='PROPERTY[34][0]' value='9.00-10.00' placeholder='9.00-10.00' required='required')
+                                                    .input-group-btn
+                                                        button.btn.btn-default.dropdown-toggle(data-toggle='dropdown' type='button')
+                                                            span.caret
+                                                        ul#conslutation_theme_top_ul2.dropdown-menu.pull-right
+                                                            li
+                                                                a(data-id='1' rel='9.00-10.00' href='javascript:void(0)') 9.00-10.00
+                                                            li
+                                                                a(data-id='2' rel='10.00-11.00' href='javascript:void(0)') 10.00-11.00
+                                                            li
+                                                                a(data-id='3' rel='11.00-12.00' href='javascript:void(0)') 11.00-12.00
+                                                            li
+                                                                a(data-id='4' rel='12.00-13.00' href='javascript:void(0)') 12.00-13.00
+                                                            li
+                                                                a(data-id='5' rel='13.00-14.00' href='javascript:void(0)') 13.00-14.00
+                                                            li
+                                                                a(data-id='6' rel='14.00-15.00' href='javascript:void(0)') 14.00-15.00
+                                                            li
+                                                                a(data-id='7' rel='15.00-16.00' href='javascript:void(0)') 15.00-16.00
+                                                            li
+                                                                a(data-id='8' rel='16.00-17.00' href='javascript:void(0)') 16.00-17.00
+                                                        // /btn-group
+                                .modal-footer
+                                    p.cons-agreement.invert-block Отправляя заявку, вы соглашаетесь на обработку 
+                                        a(href='/obrabotka-personalnyh-dannyh/') персональных данных
+                                        |  и с условиями 
+                                        a(href='/obrabotka-personalnyh-dannyh/') политики конфиденциальности
+                                    #recaptcha3.g-recaptcha(data-sitekey='6LdAL5oUAAAAALBecmQdwBonmYP4q1Qg-yiK4qsJ' data-callback='onSubmit_Appointment_add' data-size='invisible')
+                                    input.cons-button.button-style.button-style--orange(type='submit' name='modal_zapis_send' value='Отправить данные')
+                                    // /.modal-content
+                    // /.modal-dialog
+                    button.fancybox-button.fancybox-close-small(type='button' data-fancybox-close='' title='Close')
+                        svg(xmlns='http://www.w3.org/2000/svg' version='1' viewBox='0 0 24 24')
+                            path(d='M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z')
+        .fancybox-caption.fancybox-caption--separate
+            .fancybox-caption__body

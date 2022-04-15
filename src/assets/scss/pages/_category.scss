@@ -31,6 +31,13 @@
     }
 }
 
+.cat-prices-section .container {
+
+    @include breakpointMax(md) {
+        padding: 0;
+    }
+}
+
 .cat-prices__title {
     margin: 0 0 40px;
     text-align: center;
@@ -41,8 +48,10 @@
 }
 
 .cat-prices__wrapper {
+    padding: 0 20px;
 
     @include breakpoint(md) {
+        padding: 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -167,7 +176,7 @@
     background: linear-gradient(180deg, rgba(215, 215, 215, 0.2) 0%, rgba(246, 246, 246, 0) 100%);
 
     @include breakpoint(md) {
-        padding: 58px 0 12px;
+        padding: 1px 0 12px;
     }
 }
 
@@ -255,7 +264,12 @@
     }
 }
 
-.evolution__content p {
+.evolution__content > p {
+    margin: 25px 0;
+}
+
+.evolution__content > p:first-of-type {
+    margin: 20px 0 60px;
     padding-left: 30px;
     display: block;
     max-width: 690px;
@@ -266,29 +280,14 @@
     border-left: 2px solid $blue;
 
     @include breakpoint(md) {
+        margin: 30px 0 100px;
         font-size: 18px;
     }
-}
-
-.evolution__content h4 {
-    margin: 60px 0 0;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-
-    @include breakpoint(md) {
-        margin: 100px 0 0;
-    }
-}
-
-.evolution__content ul {
-    margin-top: 47px;
 }
 
 .evolution__content ul li {
     margin-left: 21px;
     position: relative;
-    font-weight: 500;
     font-size: 16px;
     line-height: 32px;
 }
@@ -379,6 +378,7 @@
 
     @include breakpoint(md) {
         margin: 0;
+        height: 123px;
         max-width: unset;
         text-align: center;
     }
@@ -413,8 +413,11 @@
     margin: 0 0 44px;
 }
 
+.method-section p {
+    margin: 25px 0;
+}
+
 .method-section ul li {
-    margin-top: 32px;
     margin-left: 21px;
     position: relative;
     font-weight: 500;

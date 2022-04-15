@@ -1,0 +1,50 @@
+#modal_callback_order {
+    max-width: 375px;
+}
+
+#modal_callback_order .cons-input-wrapper {
+    margin: 15px 0 0;
+}
+
+#modal_callback_order .cons-input {
+    margin: 0;
+}
+
+#modal_callback_order .cons-button {
+    border: none;
+    cursor: pointer;
+}
+
+#modal_callback_order .cons-agreement {
+    margin: 25px 0;
+}
+
+/////////////////////
+/// MODAL THANKS
+////////////////////
+
+#modal_callback_order_success .modal-title {
+    font-size: 24px;
+}
+
+#modal_callback_order_success .modal-body {
+    margin: 15px auto 0;
+    max-width: 215px;
+    text-align: center;
+}
+
+#modal_callback_order_success .modal-footer button {
+    margin: 30px auto 0;
+    padding: 15px;
+    background: $orange;
+    max-width: 198px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#modal_callback_order_success .modal-footer button:hover {
+    background: #f9ce6f;
+}
