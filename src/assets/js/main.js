@@ -171,4 +171,7 @@ $(document).ready(function() {
       });
   }
 
+  // INPUT PHONE MASK
+  $('input[type="tel"]').inputmask({"mask": "+7 (999) 99-99-99"});
+
 });

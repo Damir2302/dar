@@ -36,6 +36,7 @@
                         .modal-content
                             form#appointment_add(role='form' name='appointment_add' action='/' method='post' enctype='multipart/form-data')
                                 .modal-header
+                                    button(type="button" class="close" data-dismiss="modal" aria-hidden="true") ×
                                     p Записаться на прием
                                     span Заполнив данную форму, Вы можете прямо сейчас записаться на прием к врачу.
                                 input#sessid_1(type='hidden' name='sessid' value='4fe323e953ab338dd77acbcfe03b9bbe')
@@ -52,7 +53,7 @@
                                                 label(for='modal_zapis_send_phone')
                                                     | Телефон
                                                     span *
-                                                input#modal_zapis_send_phone.form-control.numeric(type='text' name='PROPERTY[30][0]' value='' placeholder='Телефон' required='required')
+                                                input#modal_zapis_send_phone.form-control.numeric(type='tel' name='PROPERTY[30][0]' value='' placeholder='Телефон' required='required')
                                             .form-group
                                                 label(for='modal_zapis_send_call_time')
                                                     | Какая помощь нужна
@@ -103,8 +104,9 @@
                                                 label(for='modal_zapis_send_data_time')
                                                     | Дата приема
                                                     span *
+                                                br
                                                 input.form-control(type='text' id='PROPERTY[36][0]' name='PROPERTY[36][0]' value='' style='display: inline;width: 100px;' placeholder='дд.мм.гггг' required='required')
-                                                img.calendar-icon(src='/bitrix/js/main/core/images/calendar-icon.gif' alt='Выбрать дату в календаре' onclick="BX.calendar({node:this, field:'PROPERTY[36][0]', form: '', bTime: true, currentTime: '1650032993', bHideTime: true});" onmouseover="BX.addClass(this, 'calendar-icon-hover');" onmouseout="BX.removeClass(this, 'calendar-icon-hover');" border='0')
+                                                img.calendar-icon(src='assets/images/calendar-icon.gif' alt='Выбрать дату в календаре' onclick="BX.calendar({node:this, field:'PROPERTY[36][0]', form: '', bTime: true, currentTime: '1650032993', bHideTime: true});" onmouseover="BX.addClass(this, 'calendar-icon-hover');" onmouseout="BX.removeClass(this, 'calendar-icon-hover');" border='0')
                                             .form-group
                                                 label(for='modal_zapis_send_call_time')
                                                     | Желаемое время звонка
@@ -133,12 +135,12 @@
                                                                 a(data-id='8' rel='16.00-17.00' href='javascript:void(0)') 16.00-17.00
                                                         // /btn-group
                                 .modal-footer
-                                    p.cons-agreement.invert-block Отправляя заявку, вы соглашаетесь на обработку 
-                                        a(href='/obrabotka-personalnyh-dannyh/') персональных данных
-                                        |  и с условиями 
+                                    input.cons-button.button-style.button-style--orange(type='submit' name='modal_zapis_send' value='Отправить данные')
+                                    p.cons-agreement Отправляя заявку, вы соглашаетесь на обработку &nbsp;
+                                        a(href='/obrabotka-personalnyh-dannyh/') персональных данных &nbsp;
+                                        |  и с условиями &nbsp;
                                         a(href='/obrabotka-personalnyh-dannyh/') политики конфиденциальности
                                     #recaptcha3.g-recaptcha(data-sitekey='6LdAL5oUAAAAALBecmQdwBonmYP4q1Qg-yiK4qsJ' data-callback='onSubmit_Appointment_add' data-size='invisible')
-                                    input.cons-button.button-style.button-style--orange(type='submit' name='modal_zapis_send' value='Отправить данные')
                                     // /.modal-content
                     // /.modal-dialog
                     button.fancybox-button.fancybox-close-small(type='button' data-fancybox-close='' title='Close')
