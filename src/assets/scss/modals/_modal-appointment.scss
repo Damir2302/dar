@@ -1,5 +1,14 @@
+.fancybox-container {
+    z-index: 999;
+}
+
 #modal_appointment_send {
     background: none;
+    overflow: visible;
+
+    @include breakpointMax(md) {
+        padding: 0;
+    }
 }
 
 #modal_appointment_send .modal-dialog {
@@ -22,27 +31,12 @@
     border-bottom: 1px solid #e5e5e5;
 }
 
-#modal_appointment_send .modal-header .close {
-    margin-top: -2px;
-    float: right;
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 1;
-    color: #000;
-    text-shadow: 0 1px 0 #fff;
-    opacity: .2;
-}
-
-#modal_appointment_send .modal-header button.close {
-    padding: 0;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    -webkit-appearance: none;
-}
-
 #modal_appointment_send .fancybox-close-small {
-    display: none;
+
+    @include breakpoint(md) {
+        top: 44px;
+        right: 44px;
+    }
 }
 
 #modal_appointment_send .modal-header p {
@@ -55,11 +49,17 @@
 }
 
 .appointment {
-    display: flex;
+
+    @include breakpoint(md) {
+        display: flex;
+    }
 }
 
 .appointment-col {
-    width: 50%;
+
+    @include breakpoint(md) {
+        width: 50%;
+    }
 }
 
 .appointment-col .modal-body {
@@ -123,6 +123,11 @@
     vertical-align: middle;
 }
 
+#conslutation_theme_top input {
+    user-select: none;
+    cursor: default;
+}
+
 .input-group-btn:last-child>.dropdown-toggle {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
@@ -182,7 +187,8 @@
     z-index: 1000;
     display: none;
     float: left;
-    min-width: 160px;
+    width: 100%;
+    min-width: 272px;
     padding: 5px 0;
     margin: 2px 0 0;
     font-size: 13px;
@@ -206,7 +212,11 @@
     font-weight: normal;
     line-height: 1.428571429;
     color: #333;
-    white-space: nowrap;
+    white-space: break-spaces;
+}
+
+.appointment-col .dropdown-menu>li>a:hover {
+    color: $blue;
 }
 
 .appointment-col .dropdown-menu.pull-right {
@@ -233,6 +243,6 @@
 }
 
 #modal_appointment_send .cons-agreement {
-    margin: 15px 0 0 auto;
+    margin: 10px 0 20px auto;
     max-width: 460px;
 }

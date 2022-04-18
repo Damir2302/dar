@@ -1,18 +1,42 @@
 $(document).ready(function() {
 
-    // SLIDER TOGGLE MENU (HEADER & FOOTER)
-    if ($(window).width() < 991) {
+    // HEADER FIXED
+    $(window).on('scroll', function() {
+      if ($(window).scrollTop() > $('#header').height()) {
+        $('body').addClass('header-fixed');
+        $('#main').css('margin-top', $('#header').height() + 'px');
+      } else if ($(window).scrollTop() == 0) {
+        $('body').removeClass('header-fixed');
+        $('#main').css('margin-top', 0);
+      }
+    });
 
+    // При изменении размера сохраняем вид меню
+    $(window).on('resize', function() {
+      if ($(window).width() > 991) {
+        $('.nav__inner').css('display', 'block');
+        $('.header__menu-mobile .fa-bars').addClass('active');
+        $('.header__menu-mobile .fa-times').removeClass('active');
+      } else {
+        $('.nav__inner').css('display', 'none');
+        $('.header__menu-mobile .fa-bars').addClass('active');
+        $('.header__menu-mobile .fa-times').removeClass('active');
+      }
+    });
+
+    // SLIDER TOGGLE MENU (HEADER & FOOTER)
       $('.header__menu-mobile').on('click', function() {
         $(this).find('i').toggleClass('active');
         $('.nav__inner').slideToggle();
       });
 
       $('.down-arrow').on('click', function() {
-          $(this).parent().parent().find('.navbar__submenu, .menu-subcat, .footer__menu-subcat').slideToggle();
+          $(this).parent().parent().find('.navbar__submenu, .footer__menu-subcat').slideToggle();
       });
 
-    }
+      $('.navbar__submenu .down-arrow').on('click', function() {
+        $(this).parent().parent().find('.menu-subcat').slideToggle();
+    });
 
     // ABOUT
     if ($('.about-license').length) {
@@ -62,8 +86,7 @@ $(document).ready(function() {
 
     // SERVICE PAGE ASIDE MENU
     $('.arrow-down').on('click', function() {
-      $(this).closest('.service__menu-item').toggleClass('active');
-      $(this).closest('.service__menu-item').find('.service__submenu').slideToggle();
+      $(this).closest('.service__menu-item').toggleClass('open');
     });
 
     // SERVICE PAGE REVIEWS
@@ -170,8 +193,5 @@ $(document).ready(function() {
 
       });
   }
-
-  // INPUT PHONE MASK
-  $('input[type="tel"]').inputmask({"mask": "+7 (999) 99-99-99"});
 
 });

@@ -63,9 +63,11 @@
 
 .services__wrapper {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     column-gap: 30px;
+    row-gap: 40px;
 
     @include breakpoint(md) {
         flex-direction: row;
@@ -78,12 +80,30 @@
 
     @include breakpoint(md) {
         margin: 0;
-        width: 33.333%;
+        width: 30%;
     }
+}
+
+.service__image {
+    display: flex;
+    height: 100%;
+    max-height: 405px;
+    overflow: hidden;
+
+    @include breakpoint(md) {
+        max-height: 205px;
+    }
+}
+
+.service__image::before {
+    content: "";
+    padding-top: 100%;
+    display: block;
 }
 
 .service__image img {
     width: 100%;
+    object-fit: cover;
 }
 
 .service__title {

@@ -1,5 +1,5 @@
 .service-hero {
-    padding: 60px 0;
+    padding: 34px 0;
     background-size: cover;
     position: relative;
 
@@ -39,6 +39,7 @@
     @include breakpoint(md) {
         padding: 0 0 46px;
         background: none;
+        display: block;
     }
 }
 
@@ -114,6 +115,12 @@
     border: 1px solid #D8D8D8;
 }
 
+.service__menu-item.active .service__menu-link {
+    position: relative;
+    border-color: $blue;
+    z-index: 2;
+}
+
 .service__menu-link .arrow-down {
     padding: 12px;
     cursor: pointer;
@@ -124,7 +131,7 @@
     font-family: $icon;
 }
 
-.service__menu-item.active .arrow-down::after {
+.service__menu-item.open .arrow-down::after {
     content: '\f077';
     font-family: $icon;
 }
@@ -135,21 +142,32 @@
 }
 
 .service__submenu {
-    margin: 12px 0 24px;
-    margin-left: 15px;
-    display: none;
+    margin: 0px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.4s ease;
 
     @include breakpoint(xl) {
         margin-left: 50px;
     }
 }
 
-.service__menu-item:first-child .service__submenu {
-    display: block;
+.service__menu-item.open .service__submenu {
+    margin: 12px 0px 24px 15px;
+    max-height: 1000px;
+
+    @include breakpoint(xl) {
+        margin: 12px 0px 24px 50px;
+    }
 }
 
 .service__submenu-link {
     line-height: 28px;
+}
+
+.service__submenu-link.active {
+    font-weight: 600;
+    color: $blue;
 }
 
 .service__submenu-link:hover {
@@ -297,14 +315,11 @@
     }
 }
 
-.service__right h2 {
-    padding: 0 20px;
-
-    @include breakpoint(md) {
-        padding: 0;
-    }
-}
-
+.service__right h2,
+.service__right h3,
+.service__right h4,
+.service__right h5,
+.service__right h6,
 .service__right p {
     padding: 0 20px;
 

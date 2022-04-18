@@ -1,0 +1,33 @@
+.service__page-section {
+    padding: 50px 0 100px;
+}
+
+.service__page-section .service__title {
+    margin-bottom: 0;
+    transition: all .4s ease;
+}
+
+.service__page-section .service__block:hover .service__title {
+    color: #0046e7;
+}
+
+.service__page-section .service__block {
+
+    @include breakpoint(sm) {
+        width: 47%;
+    }
+    
+    @include breakpoint(md) {
+        width: 30%;
+        cursor: pointer;
+    }
+}
+
+.service__page-section .service__image img {
+    transition: all 0.4s ease;
+}
+
+.service__page-section .service__block:hover .service__image img {
+    transform: scale(1.2);
+}
+

@@ -1,15 +1,58 @@
+body.header-fixed .header {
+    margin-top: -100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    animation: fixed .5s linear forwards;
+}
+
+@keyframes fixed {
+    100% {margin-top: 0%;}
+}
+
 .header__top {
+    padding: 15px 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(xs) {
+        padding: 5px 0;
+    }
+
+    @include breakpoint(sm) {
+        padding: 15px 0;
+        justify-content: unset;
+    }
 }
 
 .header__logo {
     position: relative;
     width: 100%;
-    max-width: 360px;
+    max-width: 110px;
+    transition: all .5s ease;
+
+    @include breakpoint(xs) {
+        max-width: 150px;
+    }
+
+    @include breakpoint(sm) {
+        max-width: 200px;
+    }
 
     @include breakpoint(xl) {
         max-width: 430px;
+    }
+}
+
+body.header-fixed .header__logo {
+
+    @include breakpoint(xl) {
+        max-width: 290px;
     }
 }
 
@@ -20,10 +63,10 @@
 .header__logo span {
     display: none;
 
-    @include breakpoint(xs) {
+    @include breakpoint(sm) {
         position: absolute;
-        right: 23px;
-        bottom: 15px;
+        right: -25px;
+        bottom: 0;
         display: block;
         font-weight: bold;
         font-size: 12px;
@@ -32,39 +75,64 @@
         color: #222222;
     }
 
-    @include breakpoint(lg) {
-        bottom: 30px;
-    }
-
     @include breakpoint(xl) {
         right: 57px;
         bottom: 34px;
+        transition: all .5s ease;
+    }
+}
+
+body.header-fixed .header__logo span {
+
+    @include breakpoint(xl) {
+        right: 20px;
+        bottom: 0;
     }
 }
 
 .header__contacts {
-    margin: 15px auto 0;
-    display: none;
+    margin-left: auto;
 
     @include breakpoint(lg) {
+        margin: 15px auto 0;
         display: block;
     }
 }
 
+.header__top-mobile .header__contacts {
+    margin: 0 auto;
+}
+
 .header__contacts i {
     margin-right: 10px;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 18px;
     color: $lightOrange;
+
+    @include breakpoint(xs) {
+        font-size: 18px;
+    }
 }
 
 .header__contacts span {
     margin: 10px 0 0;
     margin-left: 28px;
-    display: block;
+    display: none;
     font-size: 12px;
     line-height: 15px;
     color: #979FA8;
+
+    @include breakpoint(xs) {
+        display: block;
+    }
+}
+
+.header__top .header-address {
+    display: none;
+
+    @include breakpoint(lg) {
+        display: block;
+    }
 }
 
 .header-address p {
@@ -76,8 +144,15 @@
     cursor: default;
 }
 
+.header-address p  a {
+    line-height: inherit;
+}
+
 .header-phone {
-    margin: 26px 0 0;
+
+    @include breakpoint(lg) {
+        margin: 26px 0 0;
+    }
 }
 
 .header-phone a {
@@ -91,14 +166,9 @@
 .header__buttons {
     display: none;
 
-    @include breakpoint(sm) {
-        margin: 0 7px;
-        display: block;
-        max-width: 198px;
-    }
-
     @include breakpoint(md) {
-        margin: 0 0 0 auto;
+        margin: 0 0 0 25px;
+        display: block;
         max-width: 198px;
     }
 }
@@ -132,8 +202,13 @@ button.button-style.button-style--blue {
 }
 
 .header__menu-mobile {
-    margin-left: 20px;
-    font-size: 28px;
+    margin-left: 14px;
+    font-size: 20px;
+
+    @include breakpoint(xs) {
+        margin-left: 20px;
+        font-size: 28px;
+    }
 
     @include breakpoint(lg) {
         display: none;
@@ -156,12 +231,21 @@ button.button-style.button-style--blue {
 }
 
 .nav__inner {
-    padding: 20px 0 50px;
+    padding: 20px 0;
     position: relative;
     top: 0;
     left: -20px;
     display: none;
     width: calc(100% + 40px);
+
+    @include breakpoint(sm) {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    @include breakpoint(md) {
+        max-width: unset;
+    }
 
     @include breakpoint(lg) {
         margin: 0;
@@ -179,15 +263,6 @@ button.button-style.button-style--blue {
 
     @include breakpoint(lg) {
         flex-direction: row;
-    }
-}
-
-.navbar__menu {
-    position: relative;
-    width: 100%;
-
-    @include breakpoint(lg) {
-        width: auto;
     }
 }
 
@@ -314,6 +389,25 @@ button.button-style.button-style--blue {
     }
 }
 
+.navbar__item:first-child {
+
+    @include breakpoint(lg) {
+        padding-left: 15px;
+    }
+}
+
+.navbar__item:first-child::before {
+
+    @include breakpoint(lg) {
+        content: '\f0c9';
+        margin-right: 20px;
+        font-family: $icon;
+        font-size: 14px;
+        line-height: 14px;
+        color: #04246E;
+    }
+}
+
 .navbar__item-submenu:hover {
 
     @include breakpoint(lg) {
@@ -326,35 +420,6 @@ button.button-style.button-style--blue {
     @include breakpoint(lg) {
         opacity: 1;
         visibility: visible;
-    }
-}
-
-.navbar-burger-icon {
-
-    @include breakpoint(lg) {
-        padding-left: 15px;
-    }
-}
-
-.navbar-burger-icon::before {
-
-    @include breakpoint(lg) {
-        content: '\f0c9';
-        margin-right: 20px;
-        font-family: $icon;
-        font-size: 14px;
-        line-height: 14px;
-        color: #04246E;
-    }
-}
-
-.navbar-burger-icon a {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-
-    @include breakpoint(lg) {
-        text-align: unset;
     }
 }
 
@@ -376,6 +441,10 @@ button.button-style.button-style--blue {
         text-align: center;
     }
 
+    @include breakpoint(md) {
+        text-align: unset;
+    }
+
     @include breakpoint(lg) {
         display: none;
     }
@@ -388,7 +457,7 @@ button.button-style.button-style--blue {
     flex-direction: column;
     max-width: 320px;
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
         display: none;
     }
 }
@@ -403,6 +472,20 @@ button.button-style.button-style--blue {
 
     @include breakpoint(sm) {
         max-width: unset;
+    }
+}
+
+.header__top-mobile .header-address {
+    margin: 0 0 15px;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(xs) {
+        display: block;
+    }
+
+    @include breakpoint(md) {
+        margin: 15px 0;
     }
 }
 
