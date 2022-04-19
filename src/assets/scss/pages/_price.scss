@@ -128,6 +128,11 @@
     }
 }
 
+.price__table summary + * {
+    margin: 15px 0;
+    padding: 0;
+}
+
 .price-list__text {
     margin: 63px 0 25px;
 
