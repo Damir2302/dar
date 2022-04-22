@@ -22,7 +22,7 @@
     padding: 12px 12px 16px;
     font-weight: 500;
     font-size: 14px;
-    color: #979FA8;
+    color: #585858;
 
     @include breakpoint(xs) {
         padding: 12px 12px 24px;
@@ -61,7 +61,7 @@
 
 .pagination-link-begin.inactive {
     font-weight: 400;
-    color: #979FA8;
+    color: #585858;
 }
 
 .pagination-arrow {
@@ -97,7 +97,7 @@
 
 .pagination-link-end.inactive {
     font-weight: 400;
-    color: #979FA8;
+    color: #585858;
 }
 
 //////////////////
@@ -155,7 +155,7 @@
 }
 
 .about__cat-item:last-child {
-    
+
     @include breakpoint(lg) {
         border-bottom: 1px solid #D8D8D8;
     }
@@ -338,7 +338,7 @@
 }
 
 .about-license__text {
-    color: #979FA8;
+    color: #585858;
 }
 
 .about-license__wrapper .swiper-pagination.swiper-dots {

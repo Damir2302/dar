@@ -24,6 +24,16 @@
     }
 }
 
+.hero__slider .hero__title a {
+	display: inline-block;
+}
+
+.hero__slider .hero__title a:hover {
+	color: #fff;
+	transition: .8s;
+	font-weight: 500;
+}
+
 .hero__title span {
     font-weight: 500;
     color: #fff;
@@ -123,7 +133,7 @@
     font-size: 14px;
     line-height: 17px;
     text-align: left;
-    color: #979FA8;
+    color: #585858;
 }
 
 .service__subtitle::before {
@@ -175,7 +185,7 @@
 .specialistes__subtitle {
     font-size: 14px;
     line-height: 17px;
-    color: #979FA8;
+    color: #585858;
 }
 
 .specialistes__image img {
@@ -236,7 +246,7 @@
 
 .cons__text {
     max-width: 490px;
-    color: #979FA8;
+    color: #585858;
 }
 
 .cons__btn {
@@ -897,7 +907,7 @@
 
 .question__answer {
     position: relative;
-    color: #979FA8;
+    color: #585858;
     display: -webkit-box;
     max-width: 320px;
     -webkit-line-clamp: 4;

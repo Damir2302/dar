@@ -46,7 +46,7 @@
 .consultation-subtitle {
     margin: 20px 0;
     max-width: 716px;
-    color: #979FA8;
+    color: #585858;
 
     @include breakpoint(md) {
         margin: 40px 0 25px;
@@ -150,7 +150,7 @@
 
 .cons-input input.invert-block {
     background: transparent;
-    color: #979FA8;
+    color: #585858;
 }
 
 .cons-button {

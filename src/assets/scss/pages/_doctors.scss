@@ -7,7 +7,7 @@
 }
 
 .doc-schedule-section .container {
-    
+
     @include breakpointMax(md) {
         padding: 0;
     }
@@ -170,7 +170,7 @@
 }
 
 .docs__sertificates {
-    
+
     @include breakpointMax(md) {
         padding: 0 20px;
     }
@@ -235,7 +235,7 @@
 }
 
 .docs__block:last-child {
-    
+
     @include breakpoint(md) {
         border-bottom: 1px solid #D7D7D7;
     }
@@ -326,7 +326,7 @@
 }
 
 .docs__content-text {
-    color: #979FA8;
+    color: #585858;
 }
 
 .docs__list-title  {

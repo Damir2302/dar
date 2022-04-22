@@ -21,8 +21,7 @@
     text-align: center;
 
     @include breakpoint(md) {
-        margin: 0 25px 50px 0;
-        float: left;
+        margin: 0 auto 50px;
     }
 
     @include breakpoint(lg) {
@@ -35,6 +34,7 @@
 }
 
 .doc-inner-img {
+    margin: 0 0 18px;
     max-width: 360px;
     max-width: 415px;
 
@@ -62,7 +62,7 @@
 
 .doc-inner-info {
     margin: 35px 0 30px;
-    color: #979FA8;
+    color: #585858;
 }
 
 .doc-inner-info h2 {

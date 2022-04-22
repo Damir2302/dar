@@ -120,7 +120,7 @@ body.header-fixed .header__logo span {
     display: none;
     font-size: 12px;
     line-height: 15px;
-    color: #979FA8;
+    color: #585858;
 
     @include breakpoint(xs) {
         display: block;
@@ -283,6 +283,7 @@ button.button-style.button-style--blue {
         flex-direction: column;
         column-gap: 25px;
         flex-wrap: wrap;
+        width: 100%;
         min-width: 905px;
         max-height: 444px;
         text-transform: none;
