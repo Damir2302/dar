@@ -307,6 +307,7 @@
 
 .info-buttons-action button {
     margin: 10px 0 0;
+    min-width: 198px;
     max-width: 198px;
 
     @include breakpoint(md) {
